@@ -1,0 +1,7 @@
+main.c:8:6:SPI_INIT	40	static
+main.c:39:6:SPI1_TransmitReceive	24	static
+main.c:62:6:SPI1_TransmitReceive_register	24	static
+main.c:88:6:SPI1_TransmitReceive_write_register	24	static
+main.c:113:6:CS_LOW	16	static
+main.c:117:6:CS_HIGH	16	static
+main.c:121:5:main	8	static
