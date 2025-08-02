@@ -2958,15 +2958,15 @@ LOAD c:/st/stm32cubeide_1.6.1/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
  .debug_macro   0x0000000000014bd2      0x210 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
  .debug_macro   0x0000000000014de2      0x1b0 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
 
-.debug_line     0x0000000000000000     0x3b6a
- .debug_line    0x0000000000000000      0xbb4 Core/Src/main.o
- .debug_line    0x0000000000000bb4      0x67e Core/Src/stm32f4xx_hal_msp.o
- .debug_line    0x0000000000001232      0x740 Core/Src/stm32f4xx_it.o
- .debug_line    0x0000000000001972      0x4f8 Core/Src/sysmem.o
- .debug_line    0x0000000000001e6a      0x6ff Core/Src/system_stm32f4xx.o
- .debug_line    0x0000000000002569       0x88 Core/Startup/startup_stm32f411vetx.o
- .debug_line    0x00000000000025f1      0x965 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
- .debug_line    0x0000000000002f56      0xc14 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+.debug_line     0x0000000000000000     0x3b68
+ .debug_line    0x0000000000000000      0xbb2 Core/Src/main.o
+ .debug_line    0x0000000000000bb2      0x67e Core/Src/stm32f4xx_hal_msp.o
+ .debug_line    0x0000000000001230      0x740 Core/Src/stm32f4xx_it.o
+ .debug_line    0x0000000000001970      0x4f8 Core/Src/sysmem.o
+ .debug_line    0x0000000000001e68      0x6ff Core/Src/system_stm32f4xx.o
+ .debug_line    0x0000000000002567       0x88 Core/Startup/startup_stm32f411vetx.o
+ .debug_line    0x00000000000025ef      0x965 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_line    0x0000000000002f54      0xc14 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
 
 .debug_str      0x0000000000000000    0x83262
  .debug_str     0x0000000000000000    0x81ebc Core/Src/main.o

@@ -6,9 +6,9 @@ main.c:67:6:DMA_Init	32	static
 main.c:99:6:DMA2_Stream2_IRQHandler	16	static,ignoring_inline_asm
 main.c:113:6:UART_init	40	static
 main.c:144:6:UART_send	24	static
-main.c:158:6:my_printf	152	static
-main.c:171:6:USART1_IRQHandler	16	static
-main.c:183:48:flash_erase_sector	32	static
-main.c:209:48:flash_program	32	static
-main.c:232:48:update	16	static,ignoring_inline_asm
-main.c:247:5:main	8	static
+main.c:159:6:my_printf	152	static
+main.c:172:6:USART1_IRQHandler	16	static
+main.c:184:48:flash_erase_sector	32	static
+main.c:210:48:flash_program	32	static
+main.c:233:48:update	16	static,ignoring_inline_asm
+main.c:246:5:main	8	static

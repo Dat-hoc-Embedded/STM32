@@ -1,0 +1,4 @@
+main.c:6:6:I2C_INIT	40	static
+main.c:42:6:I2C_write_CTRL_REG1_A	40	static
+main.c:85:9:I2C_read_CTRL_REG1_A	40	static
+main.c:142:5:main	16	static

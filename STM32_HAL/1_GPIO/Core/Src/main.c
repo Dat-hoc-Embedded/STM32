@@ -39,11 +39,10 @@ void LED_CONTROL(led_t led, led_state state){
 	else
 		*GPIOD_ODR &= ~(0b1 << led + 12);
 
-	HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, GPIO_PIN_SET);
-	HAL_Delay(1000);
-	HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, GPIO_PIN_RESET);
-	HAL_Delay(1000);
-
+//	HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, GPIO_PIN_SET);
+//	HAL_Delay(1000);
+//	HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, GPIO_PIN_RESET);
+//	HAL_Delay(1000);
 
 }
 int main(){
@@ -51,7 +50,6 @@ int main(){
 	GPIO_INIT();
 	while (1){
 		for (int i = 0 ; i < 2; i ++){
-			//HAL_GPIO_TogglePin(GPIOx, GPIO_Pin);
 			LED_CONTROL(i, ON_LED);
 			LED_CONTROL(i+2, ON_LED);
 			HAL_Delay(1000);

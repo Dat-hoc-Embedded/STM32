@@ -30,6 +30,7 @@ void LED_CONTROL(led_t led, led_state_t state){
 /* ------------------------ UART */
 #define GPIOB_BASE_ADDR 0x40020400
 #define UART1_BASE_ADDR 0x40011000
+
 void UART1_INIT(){
 	__HAL_RCC_GPIOB_CLK_ENABLE();
 	uint32_t *GPIOB_MODER = (uint32_t *)(GPIOB_BASE_ADDR + 0x00);
@@ -56,6 +57,7 @@ void UART1_INIT(){
 	/* ----------------- UART Interrupt */
 	*UART1_CR1 |= (0b1 << 5); // Set bit RXNEIE
 	// Position = 37 -> Bit 5 NVIC_ISER1(0xE000E104)
+
 	uint32_t *NVIC_ISER1 = (uint32_t *)(0xE000E104);
 	*NVIC_ISER1 |= (0b1 << 5);
 }
@@ -66,6 +68,12 @@ void UART_SEND(char data){
 	uint32_t *UART1_SR = (uint32_t *)(UART1_BASE_ADDR + 0x00);
 	while(((*UART1_SR >> 6) & 1) == 0);
 }
+void UART_SEND_STRING(char *str){
+	for (int i = 0 ; i < strlen(str); i++){
+		UART_SEND(str[i]);
+	}
+}
+
 #include <string.h>
 #include <stdarg.h>
 #include <stdio.h>
@@ -79,10 +87,11 @@ void my_printf(char *str,...){
 		UART_SEND(print_buf[i]);
 	}
 	va_end(list);
-
 }
-char rx_buf[32];
+
+char rx_buf[8];
 int rx_index = 0;
+	// Interupt function
 void USART1_IRQHandler()
 {
 	uint32_t *UART_DR = (uint32_t*)(UART1_BASE_ADDR + 0x04);
@@ -90,26 +99,43 @@ void USART1_IRQHandler()
 	while (((*UART_SR >> 5) & 1) == 0);
 	rx_buf[rx_index] = *UART_DR;
 	rx_index ++;
+	/* ------------- "LED ON" -> ON , "LED OFF" -> OFF */
+	if (!strcmpi(rx_buf,"LED ON")){
+		LED_CONTROL(LED_GREEN, ON_LED);
+		memset(rx_buf, 0, sizeof(rx_buf));
+		rx_index = 0;
+	}else if(!strcmpi(rx_buf,"LED OFF")) {
+		LED_CONTROL(LED_GREEN, OFF_LED);
+		memset(rx_buf, 0, sizeof(rx_buf));
+		rx_index = 0;
+	}
 }
 int main(){
 	HAL_Init();
 	LED_INIT();
 	UART1_INIT();
 	while(1){
+		/* ---------- Send 1 byte ---------- */
 //		UART_SEND('D');
 //		UART_SEND('A');
 //		UART_SEND('T');
 //		UART_SEND('\n');
-		/* ------------- Test my_printf() */
+
+		/* ------------- Function my_printf() -------- */
 //		int x = 10;
 //		my_printf("Day la diem lap trinh cua: %d \n",x);
 //		HAL_Delay(1000);
 
+		/* -------------- Send multi data -------- */
+//		char msg[] = "CORE use UART transmit to PC \n";
+//		UART_SEND_STRING(msg);
+//		HAL_Delay(1000);
+
 		/* ------------- Test Interrupt: Send and Leds */
-		LED_CONTROL(LED_RED, ON_LED);
-		HAL_Delay(1000);
-		LED_CONTROL(LED_RED, OFF_LED);
-		HAL_Delay(1000);
+//		LED_CONTROL(LED_RED, ON_LED);
+//		HAL_Delay(1000);
+//		LED_CONTROL(LED_RED, OFF_LED);
+//		HAL_Delay(1000);
 
 	}
 	return 0;

@@ -141,14 +141,15 @@ void UART_init()
 #endif
 }
 
-void UART_send(char* data)
+void UART_send(char *data)
 {
 	uint32_t * UART_DR = (uint32_t*)(UART1_BASE_ADDR + 0x04);
-	uint32_t *UART_SR = (uint32_t*)(UART1_BASE_ADDR + 0x00);
+	uint32_t * UART_SR = (uint32_t*)(UART1_BASE_ADDR + 0x00);
 
 	*UART_DR = data;
 	// wait until transmission is complete.
 	while(((*UART_SR >> 6) & 1) == 0){ // check transmit complete?
+
 	}
 }
 // Tao ham printf
@@ -230,8 +231,6 @@ __attribute__((section(".ham_tren_ram"))) void flash_program(uint8_t* addr, uint
 }
 
 __attribute__((section(".ham_tren_ram"))) void update(){
-
-
 
 	if (recv_new_fw_complete == 1)
 	{

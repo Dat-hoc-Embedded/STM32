@@ -1,0 +1,7 @@
+AbstractTextEditor.Color.Background=250,250,250
+AbstractTextEditor.Color.Background.SystemDefault=false
+AbstractTextEditor.Color.SelectionBackground.SystemDefault=false
+AbstractTextEditor.Color.SelectionForeground.SystemDefault=false
+eclipse.preferences.version=1
+spellingEnabled=false
+spellingEngine=org.eclipse.jdt.internal.ui.text.spelling.DefaultSpellingEngine

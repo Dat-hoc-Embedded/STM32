@@ -1,0 +1,11 @@
+main.c:114:6:my_printf	536	static
+main.c:132:5:main	8	static
+main.c:230:6:SystemClock_Config	88	static
+main.c:270:13:MX_USART1_UART_Init	8	static
+main.c:303:13:MX_GPIO_Init	40	static
+main.c:334:6:task1_blink_red_led	16	static
+main.c:353:6:task2_blink_bue_led	16	static
+main.c:373:6:task3_send_hello	24	static
+main.c:401:6:task4_send_xinchao	24	static
+main.c:423:6:task5_read_ss_data	24	static
+main.c:442:6:Error_Handler	4	static,ignoring_inline_asm
