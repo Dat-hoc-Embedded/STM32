@@ -83,7 +83,7 @@ void I2C_write_CTRL_REG1_A(uint8_t slave_addr, uint8_t reg, uint8_t data){
 }
 volatile uint8_t r_data;
 uint8_t I2C_read_CTRL_REG1_A(uint8_t slave_addr, uint8_t reg){
-	uint8_t data;
+	uint8_t data = 9;
 
 	uint16_t *I2C1_CR1 = (uint16_t *)(I2C1_BASE_ADDR + 0x00);
 	uint16_t *I2C1_SR1 = (uint16_t *)(I2C1_BASE_ADDR + 0x14);
@@ -139,14 +139,18 @@ uint8_t I2C_read_CTRL_REG1_A(uint8_t slave_addr, uint8_t reg){
 	return data;
 
 }
+
 int main(){
 	HAL_Init();
 	I2C_INIT();
-
+	uint8_t val = 5;
+	val = 1;
 	I2C_write_CTRL_REG1_A(0x19, 0x20, 0x57);
-	uint8_t val = I2C_read_CTRL_REG1_A(0x19, 0x20);
+	r_data = I2C_read_CTRL_REG1_A(0x19, 0x20);
 
 	while(1){
+
+
 
 	}
 

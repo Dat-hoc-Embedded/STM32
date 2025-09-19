@@ -547,7 +547,7 @@ void UART_init()
 
 0800053c <UART_send>:
 
-void UART_send(char* data)
+void UART_send(char *data)
 {
  800053c:	b480      	push	{r7}
  800053e:	b085      	sub	sp, #20

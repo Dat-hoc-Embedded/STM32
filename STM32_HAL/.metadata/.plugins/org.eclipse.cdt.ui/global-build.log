@@ -1,4 +1,4 @@
-11:08:21 **** Incremental Build of configuration Debug for project 1_GPIO ****
+23:01:32 **** Incremental Build of configuration Debug for project 1_GPIO ****
 make -j20 all 
 arm-none-eabi-size  1_GPIO.elf 
    text	   data	    bss	    dec	    hex	filename
