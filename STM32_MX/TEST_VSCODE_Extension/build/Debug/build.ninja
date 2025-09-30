@@ -50,52 +50,68 @@ cmake_ninja_workdir = D$:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/build/De
 build cmake_object_order_depends_target_TEST_VSCODE_Extension: phony || cmake_object_order_depends_target_STM32_Drivers
 
 build CMakeFiles/TEST_VSCODE_Extension.dir/Core/Src/main.c.obj: C_COMPILER__TEST_VSCODE_Extension_unscanned_Debug D$:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/Src/main.c || cmake_object_order_depends_target_TEST_VSCODE_Extension
-  DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DHSE_VALUE=8000000U -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TEST_VSCODE_Extension.dir\Core\Src\main.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/Inc -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/STM32F4xx_HAL_Driver/Inc -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/CMSIS/Include
+  INCLUDES = -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/Inc -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/User -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/CMSIS/Include -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/STM32F4xx_HAL_Driver/Inc -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy
   OBJECT_DIR = CMakeFiles\TEST_VSCODE_Extension.dir
   OBJECT_FILE_DIR = CMakeFiles\TEST_VSCODE_Extension.dir\Core\Src
 
 build CMakeFiles/TEST_VSCODE_Extension.dir/Core/Src/stm32f4xx_it.c.obj: C_COMPILER__TEST_VSCODE_Extension_unscanned_Debug D$:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/Src/stm32f4xx_it.c || cmake_object_order_depends_target_TEST_VSCODE_Extension
-  DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DHSE_VALUE=8000000U -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TEST_VSCODE_Extension.dir\Core\Src\stm32f4xx_it.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/Inc -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/STM32F4xx_HAL_Driver/Inc -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/CMSIS/Include
+  INCLUDES = -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/Inc -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/User -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/CMSIS/Include -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/STM32F4xx_HAL_Driver/Inc -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy
   OBJECT_DIR = CMakeFiles\TEST_VSCODE_Extension.dir
   OBJECT_FILE_DIR = CMakeFiles\TEST_VSCODE_Extension.dir\Core\Src
 
 build CMakeFiles/TEST_VSCODE_Extension.dir/Core/Src/stm32f4xx_hal_msp.c.obj: C_COMPILER__TEST_VSCODE_Extension_unscanned_Debug D$:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/Src/stm32f4xx_hal_msp.c || cmake_object_order_depends_target_TEST_VSCODE_Extension
-  DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DHSE_VALUE=8000000U -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TEST_VSCODE_Extension.dir\Core\Src\stm32f4xx_hal_msp.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/Inc -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/STM32F4xx_HAL_Driver/Inc -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/CMSIS/Include
+  INCLUDES = -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/Inc -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/User -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/CMSIS/Include -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/STM32F4xx_HAL_Driver/Inc -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy
   OBJECT_DIR = CMakeFiles\TEST_VSCODE_Extension.dir
   OBJECT_FILE_DIR = CMakeFiles\TEST_VSCODE_Extension.dir\Core\Src
 
 build CMakeFiles/TEST_VSCODE_Extension.dir/Core/Src/sysmem.c.obj: C_COMPILER__TEST_VSCODE_Extension_unscanned_Debug D$:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/Src/sysmem.c || cmake_object_order_depends_target_TEST_VSCODE_Extension
-  DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DHSE_VALUE=8000000U -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TEST_VSCODE_Extension.dir\Core\Src\sysmem.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/Inc -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/STM32F4xx_HAL_Driver/Inc -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/CMSIS/Include
+  INCLUDES = -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/Inc -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/User -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/CMSIS/Include -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/STM32F4xx_HAL_Driver/Inc -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy
   OBJECT_DIR = CMakeFiles\TEST_VSCODE_Extension.dir
   OBJECT_FILE_DIR = CMakeFiles\TEST_VSCODE_Extension.dir\Core\Src
 
 build CMakeFiles/TEST_VSCODE_Extension.dir/Core/Src/syscalls.c.obj: C_COMPILER__TEST_VSCODE_Extension_unscanned_Debug D$:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/Src/syscalls.c || cmake_object_order_depends_target_TEST_VSCODE_Extension
-  DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DHSE_VALUE=8000000U -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TEST_VSCODE_Extension.dir\Core\Src\syscalls.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/Inc -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/STM32F4xx_HAL_Driver/Inc -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/CMSIS/Include
+  INCLUDES = -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/Inc -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/User -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/CMSIS/Include -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/STM32F4xx_HAL_Driver/Inc -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy
   OBJECT_DIR = CMakeFiles\TEST_VSCODE_Extension.dir
   OBJECT_FILE_DIR = CMakeFiles\TEST_VSCODE_Extension.dir\Core\Src
 
 build CMakeFiles/TEST_VSCODE_Extension.dir/startup_stm32f411xe.s.obj: ASM_COMPILER__TEST_VSCODE_Extension_unscanned_Debug D$:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/startup_stm32f411xe.s || cmake_object_order_depends_target_TEST_VSCODE_Extension
-  DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DHSE_VALUE=8000000U -DSTM32F411xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\TEST_VSCODE_Extension.dir\startup_stm32f411xe.s.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -x assembler-with-cpp -MMD -MP -g
-  INCLUDES = -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/Inc -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/STM32F4xx_HAL_Driver/Inc -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/CMSIS/Include
+  INCLUDES = -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/Inc -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/User -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/CMSIS/Include -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/STM32F4xx_HAL_Driver/Inc -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy
   OBJECT_DIR = CMakeFiles\TEST_VSCODE_Extension.dir
   OBJECT_FILE_DIR = CMakeFiles\TEST_VSCODE_Extension.dir
+
+build CMakeFiles/TEST_VSCODE_Extension.dir/Core/User/motor/motor.c.obj: C_COMPILER__TEST_VSCODE_Extension_unscanned_Debug D$:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/User/motor/motor.c || cmake_object_order_depends_target_TEST_VSCODE_Extension
+  DEFINES = -DDEBUG -DHSE_VALUE=8000000U -DSTM32F411xE -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\TEST_VSCODE_Extension.dir\Core\User\motor\motor.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/Inc -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/User -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/CMSIS/Include -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/STM32F4xx_HAL_Driver/Inc -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy
+  OBJECT_DIR = CMakeFiles\TEST_VSCODE_Extension.dir
+  OBJECT_FILE_DIR = CMakeFiles\TEST_VSCODE_Extension.dir\Core\User\motor
+
+build CMakeFiles/TEST_VSCODE_Extension.dir/Core/User/uart/uart.c.obj: C_COMPILER__TEST_VSCODE_Extension_unscanned_Debug D$:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/User/uart/uart.c || cmake_object_order_depends_target_TEST_VSCODE_Extension
+  DEFINES = -DDEBUG -DHSE_VALUE=8000000U -DSTM32F411xE -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\TEST_VSCODE_Extension.dir\Core\User\uart\uart.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/Inc -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Core/User -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/CMSIS/Device/ST/STM32F4xx/Include -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/CMSIS/Include -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/STM32F4xx_HAL_Driver/Inc -ID:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy
+  OBJECT_DIR = CMakeFiles\TEST_VSCODE_Extension.dir
+  OBJECT_FILE_DIR = CMakeFiles\TEST_VSCODE_Extension.dir\Core\User\uart
 
 
 # =============================================================================
@@ -105,7 +121,7 @@ build CMakeFiles/TEST_VSCODE_Extension.dir/startup_stm32f411xe.s.obj: ASM_COMPIL
 #############################################
 # Link the executable TEST_VSCODE_Extension.elf
 
-build TEST_VSCODE_Extension.elf: C_EXECUTABLE_LINKER__TEST_VSCODE_Extension_Debug cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj CMakeFiles/TEST_VSCODE_Extension.dir/Core/Src/main.c.obj CMakeFiles/TEST_VSCODE_Extension.dir/Core/Src/stm32f4xx_it.c.obj CMakeFiles/TEST_VSCODE_Extension.dir/Core/Src/stm32f4xx_hal_msp.c.obj CMakeFiles/TEST_VSCODE_Extension.dir/Core/Src/sysmem.c.obj CMakeFiles/TEST_VSCODE_Extension.dir/Core/Src/syscalls.c.obj CMakeFiles/TEST_VSCODE_Extension.dir/startup_stm32f411xe.s.obj || cmake/stm32cubemx/STM32_Drivers
+build TEST_VSCODE_Extension.elf: C_EXECUTABLE_LINKER__TEST_VSCODE_Extension_Debug cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj CMakeFiles/TEST_VSCODE_Extension.dir/Core/Src/main.c.obj CMakeFiles/TEST_VSCODE_Extension.dir/Core/Src/stm32f4xx_it.c.obj CMakeFiles/TEST_VSCODE_Extension.dir/Core/Src/stm32f4xx_hal_msp.c.obj CMakeFiles/TEST_VSCODE_Extension.dir/Core/Src/sysmem.c.obj CMakeFiles/TEST_VSCODE_Extension.dir/Core/Src/syscalls.c.obj CMakeFiles/TEST_VSCODE_Extension.dir/startup_stm32f411xe.s.obj CMakeFiles/TEST_VSCODE_Extension.dir/Core/User/motor/motor.c.obj CMakeFiles/TEST_VSCODE_Extension.dir/Core/User/uart/uart.c.obj || cmake/stm32cubemx/STM32_Drivers
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3
   OBJECT_DIR = CMakeFiles\TEST_VSCODE_Extension.dir
   POST_BUILD = cd .

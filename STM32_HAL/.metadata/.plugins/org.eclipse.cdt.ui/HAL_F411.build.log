@@ -1,4 +1,4 @@
-22:45:05 **** Build of configuration Debug for project HAL_F411 ****
+20:43:45 **** Build of configuration Debug for project HAL_F411 ****
 make -j20 all 
 arm-none-eabi-size  HAL_F411.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  HAL_F411.elf
 Finished building: default.size.stdout
  
 
-22:45:05 Build Finished. 0 errors, 0 warnings. (took 135ms)
+20:43:45 Build Finished. 0 errors, 0 warnings. (took 192ms)
 

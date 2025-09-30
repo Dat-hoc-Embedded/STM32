@@ -1,7 +1,7 @@
-23:01:32 **** Incremental Build of configuration Debug for project 1_GPIO ****
+20:43:45 **** Build of configuration Debug for project HAL_F411 ****
 make -j20 all 
-arm-none-eabi-size  1_GPIO.elf 
+arm-none-eabi-size  HAL_F411.elf 
    text	   data	    bss	    dec	    hex	filename
-   1932	     12	   1572	   3516	    dbc	1_GPIO.elf
+   4748	     12	   1572	   6332	   18bc	HAL_F411.elf
 Finished building: default.size.stdout
  

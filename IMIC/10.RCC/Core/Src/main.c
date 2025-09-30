@@ -8,7 +8,7 @@
 // Function MODER INIT for LEDs
 void LEDS_INIT(){
 
-	uint32_t* GPIOD_MODER = GPIOD_BASE_ADDR + 0x00;
+	uint32_t* GPIOD_MODER = (uint32_t *)(GPIOD_BASE_ADDR + 0x00);
 	// Reset bit MODER of PD 12,13,14,15
 	*GPIOD_MODER &= ~(0xFF << 24); // 0xFF = 0x1111 1111
 
@@ -32,7 +32,7 @@ typedef enum{
 }led_state_t;
 
 void LEDS_CONTROL(led_t led, led_state_t state){
-	uint32_t *GPIOD_ODR = GPIOD_BASE_ADDR + 0x14;
+	uint32_t *GPIOD_ODR = (uint32_t *)(GPIOD_BASE_ADDR + 0x14);
 	if (state == ON_LED)
 		*GPIOD_ODR |= (0b1 << (12 + led));
 	else
@@ -83,12 +83,22 @@ void RCC_ENABLE(){
 	*RCC_AHB1ENR |= (0b1 << 3);
 
 }
+volatile uint32_t SYSCLK = 0;
+volatile uint32_t PCLK1 = 0;
+volatile uint32_t PCLK2 = 0;
+volatile uint32_t HCLK = 0;
 int main(){
 	HAL_Init();
 	RCC_INIT();
+	SystemCoreClockUpdate();
 	RCC_ENABLE();
 	LEDS_INIT();
 	while(1){
+		SYSCLK = HAL_RCC_GetSysClockFreq();
+		HCLK = HAL_RCC_GetHCLKFreq(); //
+		PCLK1 = HAL_RCC_GetPCLK1Freq(); // APB1
+		PCLK2 = HAL_RCC_GetPCLK2Freq(); // APB2
+
 		LEDS_CONTROL(LED_BLUE, ON_LED);
 		HAL_Delay(1000);
 		LEDS_CONTROL(LED_BLUE, OFF_LED);

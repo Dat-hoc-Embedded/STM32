@@ -10,7 +10,22 @@
              */
             "name": "STM32",
             "configurationProvider": "ms-vscode.cmake-tools",
-            "intelliSenseMode": "${default}"
+            //"intelliSenseMode": "${default}"
+             "includePath": [
+             "${workspaceFolder}/Core/Inc",
+             "${workspaceFolder}/Core/User",
+             "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32F4xx/Include",
+             "${workspaceFolder}/Drivers/CMSIS/Include",
+             "${workspaceFolder}/Drivers/STM32F4xx_HAL_Driver/Inc"
+             ],
+            "defines": [
+                "STM32F411xE",      // Quan trọng! để stm32f4xx.h chọn đúng chip
+                "USE_HAL_DRIVER"
+            ],
+            "compilerPath": "arm-none-eabi-gcc",
+            "intelliSenseMode": "gcc-arm",
+             "cStandard": "c11",
+             "cppStandard": "c++17"
         }
     ]
 }

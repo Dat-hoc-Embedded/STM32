@@ -1,131 +1,64 @@
 #include <main.h>
+#include "stm32f4xx.h"
+#include "uart/uart.h"
+#include "motor/motor.h"
 
-/*------------------- LEDs */
-// LED on board is: PD12, PD13, PD14, PD15 đang ở trạng thái nối GND
-#define GPIOD_BASE_ADDR 0x40020C00 // BASE ADDRESS GPIOD
+void SystemClock_Config()
+{
+	//  ------------------- SET UP 100MHZ 
+    // 1. Turn on HSE: 8 MHz
+	RCC -> PLLCFGR |= RCC_PLLCFGR_PLLSRC_HSE ; 
 
-// Function MODER INIT for LEDs
-void LEDS_INIT(){
-	// Khoi tao CLOCK cho GPIOD
-	__HAL_RCC_GPIOD_CLK_ENABLE();
+	// 2. PLLM = (/)8 ; PLLP = (/)2 ; PLLN = (*)200; (→ 100 MHz)
+	RCC -> PLLCFGR &= ~(RCC_PLLCFGR_PLLM_Msk | RCC_PLLCFGR_PLLN_Msk | RCC_PLLCFGR_PLLP_Msk);
+	RCC -> PLLCFGR |= ((8 << RCC_PLLCFGR_PLLM_Pos) | (200 << RCC_PLLCFGR_PLLN_Pos) | (0 << RCC_PLLCFGR_PLLP_Pos));
 
-	uint32_t* GPIOD_MODER = GPIOD_BASE_ADDR + 0x00;
-	// Reset bit MODER of PD 12,13,14,15
-	*GPIOD_MODER &= ~(0xFF << 24); // 0xFF = 0x1111 1111
+	// 3. Set wait states (cycles) for Flash (100 MHz @ Vdd >=2.7V → 3WS)
+	FLASH -> ACR &= ~FLASH_ACR_LATENCY_Msk;
+	FLASH -> ACR |= FLASH_ACR_LATENCY_3WS; 
 
-	// SET [01] cho MODE: OUTPUT
-	*GPIOD_MODER |= (0b01 << 24); // LED GREEN bits [24:25]
-	*GPIOD_MODER |= (0b01 << 26); // LED ORANGE ...
-	*GPIOD_MODER |= (0b01 << 28); // LED RED ...
-	*GPIOD_MODER |= (0b01 << 30); // LED BLUE ...
+	// 4. ON HSE & PLL Clock 
+	RCC -> CR |= RCC_CR_HSEON;
+	while (!(RCC -> CR & RCC_CR_HSERDY)); // WAIT HSERDY = 1 
+	RCC -> CR |= RCC_CR_PLLON;
+	while (!(RCC -> CR & RCC_CR_PLLRDY)); 
+
+	// 5. SET PRESCALERS FOR AHB, APB1, APB2
+	RCC -> CFGR &= ~RCC_CFGR_HPRE; // AHB PRESCALER = /1
+
+	RCC -> CFGR &= ~(RCC_CFGR_PPRE1_Msk); 
+	RCC -> CFGR |= RCC_CFGR_PPRE1_DIV2; // APB1 PRESCALER = /2
+
+	RCC -> CFGR &= ~RCC_CFGR_PPRE2_Msk; // APB2 PRESCALER = /1
+	RCC -> CFGR |= RCC_CFGR_PPRE2_DIV1; // APB2 PRESCALER = /1
+
+	// 6. SWITCH SYSCLK TO PLL 
+	RCC -> CFGR &= ~RCC_CFGR_SW; 
+	RCC -> CFGR |= RCC_CFGR_SW_PLL;
+	while((RCC->CFGR & RCC_CFGR_SWS) != RCC_CFGR_SWS_PLL);
 }
 
-// Function for Control Leds
-typedef enum{
-	LED_GREEN,
-	LED_ORANGE,
-	LED_RED,
-	LED_BLUE
-}led_t;
-
-typedef enum{
-	OFF_LED,
-	ON_LED
-}led_state_t;
-
-void LEDS_CONTROL(led_t led, led_state_t state){
-	uint32_t *GPIOD_ODR = GPIOD_BASE_ADDR + 0x14;
-	if (state == ON_LED)
-		*GPIOD_ODR |= (0b1 << (12 + led));
-	else
-		*GPIOD_ODR &= ~(0b1 << (12 + led));
-}
-// FUNCTION OPTIONAL
-void BLINK_FULL_LEDS(){
-	LEDS_CONTROL(LED_GREEN, ON_LED);
-	LEDS_CONTROL(LED_ORANGE, ON_LED);
-	LEDS_CONTROL(LED_RED, ON_LED);
-	LEDS_CONTROL(LED_BLUE, ON_LED);
-	HAL_Delay(200);
-
-	LEDS_CONTROL(LED_GREEN, OFF_LED);
-	LEDS_CONTROL(LED_ORANGE, OFF_LED);
-	LEDS_CONTROL(LED_RED, OFF_LED);
-	LEDS_CONTROL(LED_BLUE, OFF_LED);
-	HAL_Delay(200);
-}
-
-/*---------------------- BUTTON  */
-// USER BUTTON: PA0
-#define GPIOA_BASE_ADDR 0x40020000
-
-void BUTTON_INIT(){
-	__HAL_RCC_GPIOA_CLK_ENABLE();
-	uint32_t* GPIOA_MODER = GPIOA_BASE_ADDR + 0x00;
-	// Reset [0:1] -> PA0 : INPUT
-	*GPIOA_MODER &= ~(0b11 << 0);
-
-	uint32_t* GPIOA_PUPDR = GPIOA_BASE_ADDR + 0x0C;
-	// Set No Pull-up,No Pull-down cho PA0
-	*GPIOA_PUPDR &= ~(0b11 << 0);
-}
-// FUNCTION READ SIGNAL pin PA0
-char BUTTON_GET_STATE(){
-	uint32_t *GPIOA_IDR = GPIOA_BASE_ADDR + 0x10;
-	if (((*GPIOA_IDR >> 0 ) & 0b1) == 1)
-		return 1;
-	else
-		return 0;
-}
-// int cnt;
-int state_green = OFF_LED;
-int state_red = OFF_LED;
-int main()
+void Clock_Init()
 {
 	HAL_Init();
-	LEDS_INIT();
-	BUTTON_INIT();
-	while(1){
-		/* --------- Test OUTPUT */
-//		for(int i = 0; i < 4; i++){
-//			LEDS_CONTROL(i, ON_LED);
-//			HAL_Delay(200);
-//			LEDS_CONTROL(i, OFF_LED);
-//			HAL_Delay(200);
-//
-//		}
-//		for(int i = 0; i < 4; i++){
-//			BLINK_FULL_LEDS();
-//		}
-		/* --------- Test INPUT */
-//		if (BUTTON_GET_STATE()==1)
-//		{
-//			cnt ++;
-//			HAL_Delay(300); // bỏ qua nhiễu của nút nhấn
-//			while(BUTTON_GET_STATE()==1); // chống dội phím
-//		}
-//		if(cnt%2==0)
-//		{
-//			LEDS_CONTROL(LED_RED, ON_LED);
-//		}else{
-//			LEDS_CONTROL(LED_RED, OFF_LED);
-//		}
-		/* BTVN: Nhấn một cái sáng, double tắt, giữ sáng led xanh, giữ lần nữa tắt */
+	SystemClock_Config(); // SET RCC -> CLOCK = 100 MHz 
+	SystemCoreClockUpdate();  // CẬP NHẬT HCLK → SystemCoreClock
+	HAL_InitTick(TICK_INT_PRIORITY); // cập nhật lại SysTick theo HCLK mới
+}
 
-		int identify = 0;  // = 1 là nhấn, = 2 là giữ, = 0 là không nhấn
-		if (BUTTON_GET_STATE() == 1){
-			identify = 1;
-			HAL_Delay(200); // bỏ qua nhiễu của nút nhấn, và đợi 500 mà vẫn có tín hiệu là giữ
-			while(BUTTON_GET_STATE()==1) identify = 2; // chống dội phím
-		}
-		if (identify == 2){
-			LEDS_CONTROL(LED_GREEN, !state_green);
-			state_green = !state_green ;
-		}
-		if(identify == 1){
-			LEDS_CONTROL(LED_RED, !state_red);
-			state_red = !state_red ;
-		}
-	}
-	return 0;
+int main(){
+	Clock_Init();
+
+	//UART1_INIT();
+	motor_pwm_init();
+	for (volatile int i = 0; i < 2e6 ; i ++);
+
+	while (1){
+		// for(volatile int i = PWM_MIN_US ; i <= 2000 ; i ++) motor_pwm_set(1, i);
+		// HAL_Delay(1000);
+		// for(volatile int i = PWM_MAX_US ; i >= 1000 ; i --) motor_pwm_set(1, i);
+		// HAL_Delay(1000);
+
+		motor_pwm_set(4, 1000);
+	};
 }
