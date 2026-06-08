@@ -1,0 +1,8 @@
+{
+  "tasks.runOnSave": "never",
+  "code-runner.executorMap": {
+    "c": "make"
+  },
+  "cortex-debug.showRegisters": true,
+  "cortex-debug.variableUseNaturalFormat": true
+}

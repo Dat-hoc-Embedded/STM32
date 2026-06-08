@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 6.8, https://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- Copyright (C) 1999-2024 Free Software Foundation, Inc.
+
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3 or
+any later version published by the Free Software Foundation; with the
+Invariant Sections being "Funding Free Software", the Front-Cover
+Texts being (a) (see below), and with the Back-Cover Texts being (b)
+(see below).  A copy of the license is included in the section entitled
+"GNU Free Documentation License".
+
+(a) The FSF's Front-Cover Text is:
+
+A GNU Manual
+
+(b) The FSF's Back-Cover Text is:
+
+You have freedom to copy and modify this GNU Manual, like GNU
+     software.  Copies published by the Free Software Foundation raise
+     funds for GNU development. -->
+<title>RENAME (The GNU Fortran Compiler)</title>
+
+<meta name="description" content="RENAME (The GNU Fortran Compiler)">
+<meta name="keywords" content="RENAME (The GNU Fortran Compiler)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link href="index.html" rel="start" title="Top">
+<link href="Option-Index.html" rel="index" title="Option Index">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Intrinsic-Procedures.html" rel="up" title="Intrinsic Procedures">
+<link href="REPEAT.html" rel="next" title="REPEAT">
+<link href="REAL.html" rel="prev" title="REAL">
+<style type="text/css">
+<!--
+a.copiable-anchor {visibility: hidden; text-decoration: none; line-height: 0em}
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+span:hover a.copiable-anchor {visibility: visible}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en">
+<div class="section" id="RENAME">
+<div class="header">
+<p>
+Next: <a href="REPEAT.html" accesskey="n" rel="next"><code>REPEAT</code> &mdash; Repeated string concatenation</a>, Previous: <a href="REAL.html" accesskey="p" rel="prev"><code>REAL</code> &mdash; Convert to real type</a>, Up: <a href="Intrinsic-Procedures.html" accesskey="u" rel="up">Intrinsic Procedures</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Option-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<span id="RENAME-_002d_002d_002d-Rename-a-file"></span><h3 class="section">8.229 <code>RENAME</code> &mdash; Rename a file</h3>
+<span id="index-RENAME"></span>
+<span id="index-file-system_002c-rename-file"></span>
+
+<dl compact="compact">
+<dt><span><em>Description</em>:</span></dt>
+<dd><p>Renames a file from file <var>PATH1</var> to <var>PATH2</var>. A null
+character (<code>CHAR(0)</code>) can be used to mark the end of the names in
+<var>PATH1</var> and <var>PATH2</var>; otherwise, trailing blanks in the file
+names are ignored.  If the <var>STATUS</var> argument is supplied, it
+contains 0 on success or a nonzero error code upon return; see
+<code>rename(2)</code>.
+</p>
+<p>This intrinsic is provided in both subroutine and function forms;
+however, only one form can be used in any given program unit.
+</p>
+</dd>
+<dt><span><em>Standard</em>:</span></dt>
+<dd><p>GNU extension
+</p>
+</dd>
+<dt><span><em>Class</em>:</span></dt>
+<dd><p>Subroutine, function
+</p>
+</dd>
+<dt><span><em>Syntax</em>:</span></dt>
+<dd><table>
+<tr><td width="80%"><code>CALL RENAME(PATH1, PATH2 [, STATUS])</code></td></tr>
+<tr><td width="80%"><code>STATUS = RENAME(PATH1, PATH2)</code></td></tr>
+</table>
+
+</dd>
+<dt><span><em>Arguments</em>:</span></dt>
+<dd><table>
+<tr><td width="15%"><var>PATH1</var></td><td width="70%">Shall be of default <code>CHARACTER</code> type.</td></tr>
+<tr><td width="15%"><var>PATH2</var></td><td width="70%">Shall be of default <code>CHARACTER</code> type.</td></tr>
+<tr><td width="15%"><var>STATUS</var></td><td width="70%">(Optional) Shall be of default <code>INTEGER</code> type.</td></tr>
+</table>
+
+</dd>
+<dt><span><em>See also</em>:</span></dt>
+<dd><p><a href="LINK.html"><code>LINK</code> &mdash; Create a hard link</a>
+</p>
+</dd>
+</dl>
+
+
+
+</div>
+
+
+
+</body>
+</html>

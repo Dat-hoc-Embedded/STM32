@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 6.8, https://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- Copyright (C) 1988-2024 Free Software Foundation, Inc.
+
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3 or
+any later version published by the Free Software Foundation; with the
+Invariant Sections being "Free Software" and "Free Software Needs
+Free Documentation", with the Front-Cover Texts being "A GNU Manual,"
+and with the Back-Cover Texts as in (a) below.
+
+(a) The FSF's Back-Cover Text is: "You are free to copy and modify
+this GNU Manual.  Buying copies from GNU Press supports the FSF in
+developing GNU and promoting software freedom." -->
+<title>Guile API (Debugging with GDB)</title>
+
+<meta name="description" content="Guile API (Debugging with GDB)">
+<meta name="keywords" content="Guile API (Debugging with GDB)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link href="index.html" rel="start" title="Top">
+<link href="Concept-Index.html" rel="index" title="Concept Index">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Guile.html" rel="up" title="Guile">
+<link href="Guile-Auto_002dloading.html" rel="next" title="Guile Auto-loading">
+<link href="Guile-Commands.html" rel="prev" title="Guile Commands">
+<style type="text/css">
+<!--
+a.copiable-anchor {visibility: hidden; text-decoration: none; line-height: 0em}
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+span:hover a.copiable-anchor {visibility: visible}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en">
+<div class="subsection" id="Guile-API">
+<div class="header">
+<p>
+Next: <a href="Guile-Auto_002dloading.html" accesskey="n" rel="next">Guile Auto-loading</a>, Previous: <a href="Guile-Commands.html" accesskey="p" rel="prev">Guile Commands</a>, Up: <a href="Guile.html" accesskey="u" rel="up">Extending <small>GDB</small> using Guile</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Concept-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<span id="Guile-API-1"></span><h4 class="subsection">23.4.3 Guile API</h4>
+<span id="index-guile-api"></span>
+<span id="index-programming-in-guile"></span>
+
+<p>You can get quick online help for <small>GDB</small>&rsquo;s Guile API by issuing
+the command <kbd>help&nbsp;guile</kbd><!-- /@w -->, or by issuing the command <kbd>,help</kbd>
+from an interactive Guile session.  Furthermore, most Guile procedures
+provided by <small>GDB</small> have doc strings which can be obtained with
+<kbd>,describe <var>procedure-name</var></kbd> or <kbd>,d <var>procedure-name</var></kbd>
+from the Guile interactive prompt.
+</p>
+
+<ul class="section-toc">
+<li><a href="Basic-Guile.html" accesskey="1">Basic Guile</a></li>
+<li><a href="Guile-Configuration.html" accesskey="2">Guile Configuration</a></li>
+<li><a href="GDB-Scheme-Data-Types.html" accesskey="3">GDB Scheme Data Types</a></li>
+<li><a href="Guile-Exception-Handling.html" accesskey="4">Guile Exception Handling</a></li>
+<li><a href="Values-From-Inferior-In-Guile.html" accesskey="5">Values From Inferior In Guile</a></li>
+<li><a href="Arithmetic-In-Guile.html" accesskey="6">Arithmetic In Guile</a></li>
+<li><a href="Types-In-Guile.html" accesskey="7">Types In Guile</a></li>
+<li><a href="Guile-Pretty-Printing-API.html" accesskey="8">Guile Pretty Printing API</a></li>
+<li><a href="Selecting-Guile-Pretty_002dPrinters.html" accesskey="9">Selecting Guile Pretty-Printers</a></li>
+<li><a href="Writing-a-Guile-Pretty_002dPrinter.html">Writing a Guile Pretty-Printer</a></li>
+<li><a href="Commands-In-Guile.html">Commands In Guile</a></li>
+<li><a href="Parameters-In-Guile.html">Parameters In Guile</a></li>
+<li><a href="Progspaces-In-Guile.html">Program Spaces In Guile</a></li>
+<li><a href="Objfiles-In-Guile.html">Objfiles In Guile</a></li>
+<li><a href="Frames-In-Guile.html">Accessing inferior stack frames from Guile.</a></li>
+<li><a href="Blocks-In-Guile.html">Accessing blocks from Guile.</a></li>
+<li><a href="Symbols-In-Guile.html">Guile representation of Symbols.</a></li>
+<li><a href="Symbol-Tables-In-Guile.html">Symbol table representation in Guile.</a></li>
+<li><a href="Breakpoints-In-Guile.html">Manipulating breakpoints using Guile</a></li>
+<li><a href="Lazy-Strings-In-Guile.html">Guile representation of lazy strings.</a></li>
+<li><a href="Architectures-In-Guile.html">Guile representation of architectures</a></li>
+<li><a href="Disassembly-In-Guile.html">Disassembly In Guile</a></li>
+<li><a href="I_002fO-Ports-in-Guile.html">I/O Ports in Guile</a></li>
+<li><a href="Memory-Ports-in-Guile.html">Memory Ports in Guile</a></li>
+<li><a href="Iterators-In-Guile.html">Iterators In Guile</a></li>
+</ul>
+</div>
+
+
+
+</body>
+</html>

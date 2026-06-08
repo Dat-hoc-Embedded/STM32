@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 6.8, https://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- Copyright (C) 1988-2024 Free Software Foundation, Inc.
+
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3 or
+any later version published by the Free Software Foundation; with the
+Invariant Sections being "Funding Free Software", the Front-Cover
+Texts being (a) (see below), and with the Back-Cover Texts being (b)
+(see below).  A copy of the license is included in the section entitled
+"GNU Free Documentation License".
+
+(a) The FSF's Front-Cover Text is:
+
+A GNU Manual
+
+(b) The FSF's Back-Cover Text is:
+
+You have freedom to copy and modify this GNU Manual, like GNU
+     software.  Copies published by the Free Software Foundation raise
+     funds for GNU development. -->
+<title>Target Macros (GNU Compiler Collection (GCC) Internals)</title>
+
+<meta name="description" content="Target Macros (GNU Compiler Collection (GCC) Internals)">
+<meta name="keywords" content="Target Macros (GNU Compiler Collection (GCC) Internals)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link href="index.html" rel="start" title="Top">
+<link href="Option-Index.html" rel="index" title="Option Index">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="index.html" rel="up" title="Top">
+<link href="Host-Config.html" rel="next" title="Host Config">
+<link href="Machine-Desc.html" rel="prev" title="Machine Desc">
+<style type="text/css">
+<!--
+a.copiable-anchor {visibility: hidden; text-decoration: none; line-height: 0em}
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+span:hover a.copiable-anchor {visibility: visible}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en">
+<div class="chapter" id="Target-Macros">
+<div class="header">
+<p>
+Next: <a href="Host-Config.html" accesskey="n" rel="next">Host Configuration</a>, Previous: <a href="Machine-Desc.html" accesskey="p" rel="prev">Machine Descriptions</a>, Up: <a href="index.html" accesskey="u" rel="up">Introduction</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Option-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<span id="Target-Description-Macros-and-Functions"></span><h2 class="chapter">18 Target Description Macros and Functions</h2>
+<span id="index-machine-description-macros"></span>
+<span id="index-target-description-macros"></span>
+<span id="index-macros_002c-target-description"></span>
+<span id="index-tm_002eh-macros"></span>
+
+<p>In addition to the file <samp><var>machine</var>.md</samp>, a machine description
+includes a C header file conventionally given the name
+<samp><var>machine</var>.h</samp> and a C source file named <samp><var>machine</var>.c</samp>.
+The header file defines numerous macros that convey the information
+about the target machine that does not fit into the scheme of the
+<samp>.md</samp> file.  The file <samp>tm.h</samp> should be a link to
+<samp><var>machine</var>.h</samp>.  The header file <samp>config.h</samp> includes
+<samp>tm.h</samp> and most compiler source files include <samp>config.h</samp>.  The
+source file defines a variable <code>targetm</code>, which is a structure
+containing pointers to functions and data relating to the target
+machine.  <samp><var>machine</var>.c</samp> should also contain their definitions,
+if they are not defined elsewhere in GCC, and other functions called
+through the macros defined in the <samp>.h</samp> file.
+</p>
+
+<ul class="section-toc">
+<li><a href="Target-Structure.html" accesskey="1">The Global <code>targetm</code> Variable</a></li>
+<li><a href="Driver.html" accesskey="2">Controlling the Compilation Driver, <samp>gcc</samp></a></li>
+<li><a href="Run_002dtime-Target.html" accesskey="3">Run-time Target Specification</a></li>
+<li><a href="Per_002dFunction-Data.html" accesskey="4">Defining data structures for per-function information.</a></li>
+<li><a href="Storage-Layout.html" accesskey="5">Storage Layout</a></li>
+<li><a href="Type-Layout.html" accesskey="6">Layout of Source Language Data Types</a></li>
+<li><a href="Registers.html" accesskey="7">Register Usage</a></li>
+<li><a href="Register-Classes.html" accesskey="8">Register Classes</a></li>
+<li><a href="Stack-and-Calling.html" accesskey="9">Stack Layout and Calling Conventions</a></li>
+<li><a href="Varargs.html">Implementing the Varargs Macros</a></li>
+<li><a href="Trampolines.html">Support for Nested Functions</a></li>
+<li><a href="Library-Calls.html">Implicit Calls to Library Routines</a></li>
+<li><a href="Addressing-Modes.html">Addressing Modes</a></li>
+<li><a href="Anchored-Addresses.html">Anchored Addresses</a></li>
+<li><a href="Condition-Code.html">Condition Code Status</a></li>
+<li><a href="Costs.html">Describing Relative Costs of Operations</a></li>
+<li><a href="Scheduling.html">Adjusting the Instruction Scheduler</a></li>
+<li><a href="Sections.html">Dividing the Output into Sections (Texts, Data, &hellip;)</a></li>
+<li><a href="PIC.html">Position Independent Code</a></li>
+<li><a href="Assembler-Format.html">Defining the Output Assembler Language</a></li>
+<li><a href="Debugging-Info.html">Controlling Debugging Information Format</a></li>
+<li><a href="Floating-Point.html">Cross Compilation and Floating Point</a></li>
+<li><a href="Mode-Switching.html">Mode Switching Instructions</a></li>
+<li><a href="Target-Attributes.html">Defining target-specific uses of <code>__attribute__</code></a></li>
+<li><a href="Emulated-TLS.html">Emulating TLS</a></li>
+<li><a href="MIPS-Coprocessors.html">Defining coprocessor specifics for MIPS targets.</a></li>
+<li><a href="PCH-Target.html">Parameters for Precompiled Header Validity Checking</a></li>
+<li><a href="C_002b_002b-ABI.html">C++ ABI parameters</a></li>
+<li><a href="D-Language-and-ABI.html">D ABI parameters</a></li>
+<li><a href="Rust-Language-and-ABI.html">Rust ABI parameters</a></li>
+<li><a href="Named-Address-Spaces.html">Adding support for named address spaces</a></li>
+<li><a href="Misc.html">Miscellaneous Parameters</a></li>
+</ul>
+</div>
+<hr>
+<div class="header">
+<p>
+Next: <a href="Host-Config.html">Host Configuration</a>, Previous: <a href="Machine-Desc.html">Machine Descriptions</a>, Up: <a href="index.html">Introduction</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Option-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

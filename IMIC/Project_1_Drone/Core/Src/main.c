@@ -88,6 +88,7 @@ void TIM2_IRQHandler()
 	}
 }
 volatile uint32_t cnt = 0;
+
 int main(){
 	HAL_Init();
 	TIM2_IC_INIT();
@@ -96,6 +97,4 @@ int main(){
 	while(1){
 		cnt = *(uint32_t *)(TIM2_BASE_ADDR + 0x24);
 	}
-
-
 }

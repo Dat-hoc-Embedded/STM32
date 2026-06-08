@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 6.8, https://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- Copyright (C) 1999-2024 Free Software Foundation, Inc.
+
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3 or
+any later version published by the Free Software Foundation; with the
+Invariant Sections being "Funding Free Software", the Front-Cover
+Texts being (a) (see below), and with the Back-Cover Texts being (b)
+(see below).  A copy of the license is included in the section entitled
+"GNU Free Documentation License".
+
+(a) The FSF's Front-Cover Text is:
+
+A GNU Manual
+
+(b) The FSF's Back-Cover Text is:
+
+You have freedom to copy and modify this GNU Manual, like GNU
+     software.  Copies published by the Free Software Foundation raise
+     funds for GNU development. -->
+<title>Runtime (The GNU Fortran Compiler)</title>
+
+<meta name="description" content="Runtime (The GNU Fortran Compiler)">
+<meta name="keywords" content="Runtime (The GNU Fortran Compiler)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link href="index.html" rel="start" title="Top">
+<link href="Option-Index.html" rel="index" title="Option Index">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="index.html" rel="up" title="Top">
+<link href="Compiler-Characteristics.html" rel="next" title="Compiler Characteristics">
+<link href="Invoking-GNU-Fortran.html" rel="prev" title="Invoking GNU Fortran">
+<style type="text/css">
+<!--
+a.copiable-anchor {visibility: hidden; text-decoration: none; line-height: 0em}
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+span:hover a.copiable-anchor {visibility: visible}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en">
+<div class="chapter" id="Runtime">
+<div class="header">
+<p>
+Next: <a href="Compiler-Characteristics.html" accesskey="n" rel="next">Compiler Characteristics</a>, Previous: <a href="Invoking-GNU-Fortran.html" accesskey="p" rel="prev">GNU Fortran Command Options</a>, Up: <a href="index.html" accesskey="u" rel="up">Introduction</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Option-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<span id="Runtime_003a-Influencing-runtime-behavior-with-environment-variables"></span><h2 class="chapter">3 Runtime:  Influencing runtime behavior with environment variables</h2>
+<span id="index-environment-variable-1"></span>
+
+<p>The behavior of the <code>gfortran</code> can be influenced by
+environment variables.
+</p>
+<p>Malformed environment variables are silently ignored.
+</p>
+
+<ul class="section-toc">
+<li><a href="TMPDIR.html" accesskey="1"><code>TMPDIR</code>&mdash;Directory for scratch files</a></li>
+<li><a href="GFORTRAN_005fSTDIN_005fUNIT.html" accesskey="2"><code>GFORTRAN_STDIN_UNIT</code>&mdash;Unit number for standard input</a></li>
+<li><a href="GFORTRAN_005fSTDOUT_005fUNIT.html" accesskey="3"><code>GFORTRAN_STDOUT_UNIT</code>&mdash;Unit number for standard output</a></li>
+<li><a href="GFORTRAN_005fSTDERR_005fUNIT.html" accesskey="4"><code>GFORTRAN_STDERR_UNIT</code>&mdash;Unit number for standard error</a></li>
+<li><a href="GFORTRAN_005fUNBUFFERED_005fALL.html" accesskey="5"><code>GFORTRAN_UNBUFFERED_ALL</code>&mdash;Do not buffer I/O on all units</a></li>
+<li><a href="GFORTRAN_005fUNBUFFERED_005fPRECONNECTED.html" accesskey="6"><code>GFORTRAN_UNBUFFERED_PRECONNECTED</code>&mdash;Do not buffer I/O on preconnected units</a></li>
+<li><a href="GFORTRAN_005fSHOW_005fLOCUS.html" accesskey="7"><code>GFORTRAN_SHOW_LOCUS</code>&mdash;Show location for runtime errors</a></li>
+<li><a href="GFORTRAN_005fOPTIONAL_005fPLUS.html" accesskey="8"><code>GFORTRAN_OPTIONAL_PLUS</code>&mdash;Print leading + where permitted</a></li>
+<li><a href="GFORTRAN_005fLIST_005fSEPARATOR.html" accesskey="9"><code>GFORTRAN_LIST_SEPARATOR</code>&mdash;Separator for list output</a></li>
+<li><a href="GFORTRAN_005fCONVERT_005fUNIT.html"><code>GFORTRAN_CONVERT_UNIT</code>&mdash;Set conversion for unformatted I/O</a></li>
+<li><a href="GFORTRAN_005fERROR_005fBACKTRACE.html"><code>GFORTRAN_ERROR_BACKTRACE</code>&mdash;Show backtrace on run-time errors</a></li>
+<li><a href="GFORTRAN_005fFORMATTED_005fBUFFER_005fSIZE.html"><code>GFORTRAN_FORMATTED_BUFFER_SIZE</code>&mdash;Set buffer size for formatted I/O</a></li>
+<li><a href="GFORTRAN_005fUNFORMATTED_005fBUFFER_005fSIZE.html"><code>GFORTRAN_UNFORMATTED_BUFFER_SIZE</code>&mdash;Set buffer size for unformatted I/O</a></li>
+</ul>
+</div>
+
+
+
+</body>
+</html>

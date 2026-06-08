@@ -1,6 +1,0 @@
-D:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/build/Debug/CMakeFiles/TEST_VSCODE_Extension.dir
-D:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/build/Debug/CMakeFiles/edit_cache.dir
-D:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/build/Debug/CMakeFiles/rebuild_cache.dir
-D:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/build/Debug/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
-D:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/build/Debug/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
-D:/CODE/STM32_IDE/STM32_MX/TEST_VSCODE_Extension/build/Debug/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir

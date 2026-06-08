@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 6.8, https://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- Copyright (C) 1999-2024 Free Software Foundation, Inc.
+
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3 or
+any later version published by the Free Software Foundation; with the
+Invariant Sections being "Funding Free Software", the Front-Cover
+Texts being (a) (see below), and with the Back-Cover Texts being (b)
+(see below).  A copy of the license is included in the section entitled
+"GNU Free Documentation License".
+
+(a) The FSF's Front-Cover Text is:
+
+A GNU Manual
+
+(b) The FSF's Back-Cover Text is:
+
+You have freedom to copy and modify this GNU Manual, like GNU
+     software.  Copies published by the Free Software Foundation raise
+     funds for GNU development. -->
+<title>Function ABI Documentation (The GNU Fortran Compiler)</title>
+
+<meta name="description" content="Function ABI Documentation (The GNU Fortran Compiler)">
+<meta name="keywords" content="Function ABI Documentation (The GNU Fortran Compiler)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link href="index.html" rel="start" title="Top">
+<link href="Option-Index.html" rel="index" title="Option Index">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Coarray-Programming.html" rel="up" title="Coarray Programming">
+<link href="Type-and-enum-ABI-Documentation.html" rel="prev" title="Type and enum ABI Documentation">
+<style type="text/css">
+<!--
+a.copiable-anchor {visibility: hidden; text-decoration: none; line-height: 0em}
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+span:hover a.copiable-anchor {visibility: visible}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en">
+<div class="section" id="Function-ABI-Documentation">
+<div class="header">
+<p>
+Previous: <a href="Type-and-enum-ABI-Documentation.html" accesskey="p" rel="prev">Type and enum ABI Documentation</a>, Up: <a href="Coarray-Programming.html" accesskey="u" rel="up">Coarray Programming</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Option-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<span id="Function-ABI-Documentation-1"></span><h3 class="section">7.2 Function ABI Documentation</h3>
+
+
+
+<ul class="section-toc">
+<li><a href="_005fgfortran_005fcaf_005finit.html" accesskey="1"><code>_gfortran_caf_init</code> &mdash; Initialiation function</a></li>
+<li><a href="_005fgfortran_005fcaf_005ffinish.html" accesskey="2"><code>_gfortran_caf_finish</code> &mdash; Finalization function</a></li>
+<li><a href="_005fgfortran_005fcaf_005fthis_005fimage.html" accesskey="3"><code>_gfortran_caf_this_image</code> &mdash; Querying the image number</a></li>
+<li><a href="_005fgfortran_005fcaf_005fnum_005fimages.html" accesskey="4"><code>_gfortran_caf_num_images</code> &mdash; Querying the maximal number of images</a></li>
+<li><a href="_005fgfortran_005fcaf_005fimage_005fstatus.html" accesskey="5"><code>_gfortran_caf_image_status</code> &mdash; Query the status of an image</a></li>
+<li><a href="_005fgfortran_005fcaf_005ffailed_005fimages.html" accesskey="6"><code>_gfortran_caf_failed_images</code> &mdash; Get an array of the indexes of the failed images</a></li>
+<li><a href="_005fgfortran_005fcaf_005fstopped_005fimages.html" accesskey="7"><code>_gfortran_caf_stopped_images</code> &mdash; Get an array of the indexes of the stopped images</a></li>
+<li><a href="_005fgfortran_005fcaf_005fregister.html" accesskey="8"><code>_gfortran_caf_register</code> &mdash; Registering coarrays</a></li>
+<li><a href="_005fgfortran_005fcaf_005fderegister.html" accesskey="9"><code>_gfortran_caf_deregister</code> &mdash; Deregistering coarrays</a></li>
+<li><a href="_005fgfortran_005fcaf_005fis_005fpresent.html"><code>_gfortran_caf_is_present</code> &mdash; Query whether an allocatable or pointer component in a derived type coarray is allocated</a></li>
+<li><a href="_005fgfortran_005fcaf_005fsend.html"><code>_gfortran_caf_send</code> &mdash; Sending data from a local image to a remote image</a></li>
+<li><a href="_005fgfortran_005fcaf_005fget.html"><code>_gfortran_caf_get</code> &mdash; Getting data from a remote image</a></li>
+<li><a href="_005fgfortran_005fcaf_005fsendget.html"><code>_gfortran_caf_sendget</code> &mdash; Sending data between remote images</a></li>
+<li><a href="_005fgfortran_005fcaf_005fsend_005fby_005fref.html"><code>_gfortran_caf_send_by_ref</code> &mdash; Sending data from a local image to a remote image with enhanced referencing options</a></li>
+<li><a href="_005fgfortran_005fcaf_005fget_005fby_005fref.html"><code>_gfortran_caf_get_by_ref</code> &mdash; Getting data from a remote image using enhanced references</a></li>
+<li><a href="_005fgfortran_005fcaf_005fsendget_005fby_005fref.html"><code>_gfortran_caf_sendget_by_ref</code> &mdash; Sending data between remote images using enhanced references on both sides</a></li>
+<li><a href="_005fgfortran_005fcaf_005flock.html"><code>_gfortran_caf_lock</code> &mdash; Locking a lock variable</a></li>
+<li><a href="_005fgfortran_005fcaf_005funlock.html"><code>_gfortran_caf_lock</code> &mdash; Unlocking a lock variable</a></li>
+<li><a href="_005fgfortran_005fcaf_005fevent_005fpost.html"><code>_gfortran_caf_event_post</code> &mdash; Post an event</a></li>
+<li><a href="_005fgfortran_005fcaf_005fevent_005fwait.html"><code>_gfortran_caf_event_wait</code> &mdash; Wait that an event occurred</a></li>
+<li><a href="_005fgfortran_005fcaf_005fevent_005fquery.html"><code>_gfortran_caf_event_query</code> &mdash; Query event count</a></li>
+<li><a href="_005fgfortran_005fcaf_005fsync_005fall.html"><code>_gfortran_caf_sync_all</code> &mdash; All-image barrier</a></li>
+<li><a href="_005fgfortran_005fcaf_005fsync_005fimages.html"><code>_gfortran_caf_sync_images</code> &mdash; Barrier for selected images</a></li>
+<li><a href="_005fgfortran_005fcaf_005fsync_005fmemory.html"><code>_gfortran_caf_sync_memory</code> &mdash; Wait for completion of segment-memory operations</a></li>
+<li><a href="_005fgfortran_005fcaf_005ferror_005fstop.html"><code>_gfortran_caf_error_stop</code> &mdash; Error termination with exit code</a></li>
+<li><a href="_005fgfortran_005fcaf_005ferror_005fstop_005fstr.html"><code>_gfortran_caf_error_stop_str</code> &mdash; Error termination with string</a></li>
+<li><a href="_005fgfortran_005fcaf_005ffail_005fimage.html"><code>_gfortran_caf_fail_image</code> &mdash; Mark the image failed and end its execution</a></li>
+<li><a href="_005fgfortran_005fcaf_005fatomic_005fdefine.html"><code>_gfortran_caf_atomic_define</code> &mdash; Atomic variable assignment</a></li>
+<li><a href="_005fgfortran_005fcaf_005fatomic_005fref.html"><code>_gfortran_caf_atomic_ref</code> &mdash; Atomic variable reference</a></li>
+<li><a href="_005fgfortran_005fcaf_005fatomic_005fcas.html"><code>_gfortran_caf_atomic_cas</code> &mdash; Atomic compare and swap</a></li>
+<li><a href="_005fgfortran_005fcaf_005fatomic_005fop.html"><code>_gfortran_caf_atomic_op</code> &mdash; Atomic operation</a></li>
+<li><a href="_005fgfortran_005fcaf_005fco_005fbroadcast.html"><code>_gfortran_caf_co_broadcast</code> &mdash; Sending data to all images</a></li>
+<li><a href="_005fgfortran_005fcaf_005fco_005fmax.html"><code>_gfortran_caf_co_max</code> &mdash; Collective maximum reduction</a></li>
+<li><a href="_005fgfortran_005fcaf_005fco_005fmin.html"><code>_gfortran_caf_co_min</code> &mdash; Collective minimum reduction</a></li>
+<li><a href="_005fgfortran_005fcaf_005fco_005fsum.html"><code>_gfortran_caf_co_sum</code> &mdash; Collective summing reduction</a></li>
+<li><a href="_005fgfortran_005fcaf_005fco_005freduce.html"><code>_gfortran_caf_co_reduce</code> &mdash; Generic collective reduction</a></li>
+</ul>
+</div>
+<hr>
+<div class="header">
+<p>
+Previous: <a href="Type-and-enum-ABI-Documentation.html">Type and enum ABI Documentation</a>, Up: <a href="Coarray-Programming.html">Coarray Programming</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Option-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

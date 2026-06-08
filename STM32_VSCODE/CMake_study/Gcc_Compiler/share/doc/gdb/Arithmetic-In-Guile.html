@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 6.8, https://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- Copyright (C) 1988-2024 Free Software Foundation, Inc.
+
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3 or
+any later version published by the Free Software Foundation; with the
+Invariant Sections being "Free Software" and "Free Software Needs
+Free Documentation", with the Front-Cover Texts being "A GNU Manual,"
+and with the Back-Cover Texts as in (a) below.
+
+(a) The FSF's Back-Cover Text is: "You are free to copy and modify
+this GNU Manual.  Buying copies from GNU Press supports the FSF in
+developing GNU and promoting software freedom." -->
+<title>Arithmetic In Guile (Debugging with GDB)</title>
+
+<meta name="description" content="Arithmetic In Guile (Debugging with GDB)">
+<meta name="keywords" content="Arithmetic In Guile (Debugging with GDB)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link href="index.html" rel="start" title="Top">
+<link href="Concept-Index.html" rel="index" title="Concept Index">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Guile-API.html" rel="up" title="Guile API">
+<link href="Types-In-Guile.html" rel="next" title="Types In Guile">
+<link href="Values-From-Inferior-In-Guile.html" rel="prev" title="Values From Inferior In Guile">
+<style type="text/css">
+<!--
+a.copiable-anchor {visibility: hidden; text-decoration: none; line-height: 0em}
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+span:hover a.copiable-anchor {visibility: visible}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en">
+<div class="subsubsection" id="Arithmetic-In-Guile">
+<div class="header">
+<p>
+Next: <a href="Types-In-Guile.html" accesskey="n" rel="next">Types In Guile</a>, Previous: <a href="Values-From-Inferior-In-Guile.html" accesskey="p" rel="prev">Values From Inferior In Guile</a>, Up: <a href="Guile-API.html" accesskey="u" rel="up">Guile API</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Concept-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<span id="Arithmetic-In-Guile-1"></span><h4 class="subsubsection">23.4.3.6 Arithmetic In Guile</h4>
+
+<p>The <code>(gdb)</code> module provides several functions for performing
+arithmetic on <code>&lt;gdb:value&gt;</code> objects.
+The arithmetic is performed as if it were done by the target,
+and therefore has target semantics which are not necessarily
+those of Scheme.  For example operations work with a fixed precision,
+not the arbitrary precision of Scheme.
+</p>
+<p>Wherever a function takes an integer or pointer as an operand,
+<small>GDB</small> will convert appropriate Scheme values to perform
+the operation.
+</p>
+<dl class="def">
+<dt id="index-value_002dadd"><span class="category">Scheme Procedure: </span><span><strong>value-add</strong> <em>a b</em><a href='#index-value_002dadd' class='copiable-anchor'> &para;</a></span></dt>
+</dl>
+
+<dl class="def">
+<dt id="index-value_002dsub"><span class="category">Scheme Procedure: </span><span><strong>value-sub</strong> <em>a b</em><a href='#index-value_002dsub' class='copiable-anchor'> &para;</a></span></dt>
+</dl>
+
+<dl class="def">
+<dt id="index-value_002dmul"><span class="category">Scheme Procedure: </span><span><strong>value-mul</strong> <em>a b</em><a href='#index-value_002dmul' class='copiable-anchor'> &para;</a></span></dt>
+</dl>
+
+<dl class="def">
+<dt id="index-value_002ddiv"><span class="category">Scheme Procedure: </span><span><strong>value-div</strong> <em>a b</em><a href='#index-value_002ddiv' class='copiable-anchor'> &para;</a></span></dt>
+</dl>
+
+<dl class="def">
+<dt id="index-value_002drem"><span class="category">Scheme Procedure: </span><span><strong>value-rem</strong> <em>a b</em><a href='#index-value_002drem' class='copiable-anchor'> &para;</a></span></dt>
+</dl>
+
+<dl class="def">
+<dt id="index-value_002dmod"><span class="category">Scheme Procedure: </span><span><strong>value-mod</strong> <em>a b</em><a href='#index-value_002dmod' class='copiable-anchor'> &para;</a></span></dt>
+</dl>
+
+<dl class="def">
+<dt id="index-value_002dpow"><span class="category">Scheme Procedure: </span><span><strong>value-pow</strong> <em>a b</em><a href='#index-value_002dpow' class='copiable-anchor'> &para;</a></span></dt>
+</dl>
+
+<dl class="def">
+<dt id="index-value_002dnot"><span class="category">Scheme Procedure: </span><span><strong>value-not</strong> <em>a</em><a href='#index-value_002dnot' class='copiable-anchor'> &para;</a></span></dt>
+</dl>
+
+<dl class="def">
+<dt id="index-value_002dneg"><span class="category">Scheme Procedure: </span><span><strong>value-neg</strong> <em>a</em><a href='#index-value_002dneg' class='copiable-anchor'> &para;</a></span></dt>
+</dl>
+
+<dl class="def">
+<dt id="index-value_002dpos"><span class="category">Scheme Procedure: </span><span><strong>value-pos</strong> <em>a</em><a href='#index-value_002dpos' class='copiable-anchor'> &para;</a></span></dt>
+</dl>
+
+<dl class="def">
+<dt id="index-value_002dabs"><span class="category">Scheme Procedure: </span><span><strong>value-abs</strong> <em>a</em><a href='#index-value_002dabs' class='copiable-anchor'> &para;</a></span></dt>
+</dl>
+
+<dl class="def">
+<dt id="index-value_002dlsh"><span class="category">Scheme Procedure: </span><span><strong>value-lsh</strong> <em>a b</em><a href='#index-value_002dlsh' class='copiable-anchor'> &para;</a></span></dt>
+</dl>
+
+<dl class="def">
+<dt id="index-value_002drsh"><span class="category">Scheme Procedure: </span><span><strong>value-rsh</strong> <em>a b</em><a href='#index-value_002drsh' class='copiable-anchor'> &para;</a></span></dt>
+</dl>
+
+<dl class="def">
+<dt id="index-value_002dmin"><span class="category">Scheme Procedure: </span><span><strong>value-min</strong> <em>a b</em><a href='#index-value_002dmin' class='copiable-anchor'> &para;</a></span></dt>
+</dl>
+
+<dl class="def">
+<dt id="index-value_002dmax"><span class="category">Scheme Procedure: </span><span><strong>value-max</strong> <em>a b</em><a href='#index-value_002dmax' class='copiable-anchor'> &para;</a></span></dt>
+</dl>
+
+<dl class="def">
+<dt id="index-value_002dlognot"><span class="category">Scheme Procedure: </span><span><strong>value-lognot</strong> <em>a</em><a href='#index-value_002dlognot' class='copiable-anchor'> &para;</a></span></dt>
+</dl>
+
+<dl class="def">
+<dt id="index-value_002dlogand"><span class="category">Scheme Procedure: </span><span><strong>value-logand</strong> <em>a b</em><a href='#index-value_002dlogand' class='copiable-anchor'> &para;</a></span></dt>
+</dl>
+
+<dl class="def">
+<dt id="index-value_002dlogior"><span class="category">Scheme Procedure: </span><span><strong>value-logior</strong> <em>a b</em><a href='#index-value_002dlogior' class='copiable-anchor'> &para;</a></span></dt>
+</dl>
+
+<dl class="def">
+<dt id="index-value_002dlogxor"><span class="category">Scheme Procedure: </span><span><strong>value-logxor</strong> <em>a b</em><a href='#index-value_002dlogxor' class='copiable-anchor'> &para;</a></span></dt>
+</dl>
+
+<dl class="def">
+<dt id="index-value_003d_003f"><span class="category">Scheme Procedure: </span><span><strong>value=?</strong> <em>a b</em><a href='#index-value_003d_003f' class='copiable-anchor'> &para;</a></span></dt>
+</dl>
+
+<dl class="def">
+<dt id="index-value_003c_003f"><span class="category">Scheme Procedure: </span><span><strong>value&lt;?</strong> <em>a b</em><a href='#index-value_003c_003f' class='copiable-anchor'> &para;</a></span></dt>
+</dl>
+
+<dl class="def">
+<dt id="index-value_003c_003d_003f"><span class="category">Scheme Procedure: </span><span><strong>value&lt;=?</strong> <em>a b</em><a href='#index-value_003c_003d_003f' class='copiable-anchor'> &para;</a></span></dt>
+</dl>
+
+<dl class="def">
+<dt id="index-value_003e_003f"><span class="category">Scheme Procedure: </span><span><strong>value&gt;?</strong> <em>a b</em><a href='#index-value_003e_003f' class='copiable-anchor'> &para;</a></span></dt>
+</dl>
+
+<dl class="def">
+<dt id="index-value_003e_003d_003f"><span class="category">Scheme Procedure: </span><span><strong>value&gt;=?</strong> <em>a b</em><a href='#index-value_003e_003d_003f' class='copiable-anchor'> &para;</a></span></dt>
+</dl>
+
+<p>Scheme does not provide a <code>not-equal</code> function,
+and thus Guile support in <small>GDB</small> does not either.
+</p>
+</div>
+<hr>
+<div class="header">
+<p>
+Next: <a href="Types-In-Guile.html">Types In Guile</a>, Previous: <a href="Values-From-Inferior-In-Guile.html">Values From Inferior In Guile</a>, Up: <a href="Guile-API.html">Guile API</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Concept-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

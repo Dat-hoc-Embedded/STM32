@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "stm32f4xx.h": "c",
+        "motor.h": "c",
+        "stdint.h": "c"
+    }
+}

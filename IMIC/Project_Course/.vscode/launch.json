@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug STM32 (ST-LINK)",
+      "type": "cortex-debug",
+      "request": "launch",
+      "servertype": "stlink",
+      "executable": "${workspaceFolder}/Debug/Project_Course.elf",
+      "device": "STM32F411VE",
+      "interface": "swd",
+      "runToEntryPoint": "main",
+      "cwd": "${workspaceFolder}",
+      "svdFile": "${workspaceFolder}/STM32F411.svd",
+      "preLaunchTask": "Build STM32",
+      "liveWatch": {
+        "enabled": true,
+        "samplesPerSecond": 20
+      }
+    }
+  ]
+}

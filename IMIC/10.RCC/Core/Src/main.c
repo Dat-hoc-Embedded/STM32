@@ -65,9 +65,11 @@ void RCC_INIT(){
 		// Set AHB prescaler
 	uint32_t *RCC_CFGR =(uint32_t *)(RCC_BASE_ADDR + 0x08);
 	*RCC_CFGR &= ~(0xF << 4); // → as /1
+
 	 	// Set APB1 prescaler (/2)
 	*RCC_CFGR &= ~(0b111 << 10);
 	*RCC_CFGR |= (0b100 << 10);
+
 		// Set APB2 prescaler (/1)
 	*RCC_CFGR &= ~(0b111 << 13); // → as /1
 
@@ -91,6 +93,8 @@ int main(){
 	HAL_Init();
 	RCC_INIT();
 	SystemCoreClockUpdate();
+	HAL_InitTick(TICK_INT_PRIORITY); // cập nhật lại SysTick theo HCLK mới
+
 	RCC_ENABLE();
 	LEDS_INIT();
 	while(1){

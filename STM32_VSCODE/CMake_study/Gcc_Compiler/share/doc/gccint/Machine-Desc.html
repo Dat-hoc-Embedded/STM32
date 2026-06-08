@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 6.8, https://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- Copyright (C) 1988-2024 Free Software Foundation, Inc.
+
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3 or
+any later version published by the Free Software Foundation; with the
+Invariant Sections being "Funding Free Software", the Front-Cover
+Texts being (a) (see below), and with the Back-Cover Texts being (b)
+(see below).  A copy of the license is included in the section entitled
+"GNU Free Documentation License".
+
+(a) The FSF's Front-Cover Text is:
+
+A GNU Manual
+
+(b) The FSF's Back-Cover Text is:
+
+You have freedom to copy and modify this GNU Manual, like GNU
+     software.  Copies published by the Free Software Foundation raise
+     funds for GNU development. -->
+<title>Machine Desc (GNU Compiler Collection (GCC) Internals)</title>
+
+<meta name="description" content="Machine Desc (GNU Compiler Collection (GCC) Internals)">
+<meta name="keywords" content="Machine Desc (GNU Compiler Collection (GCC) Internals)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link href="index.html" rel="start" title="Top">
+<link href="Option-Index.html" rel="index" title="Option Index">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="index.html" rel="up" title="Top">
+<link href="Target-Macros.html" rel="next" title="Target Macros">
+<link href="Loop-Analysis-and-Representation.html" rel="prev" title="Loop Analysis and Representation">
+<style type="text/css">
+<!--
+a.copiable-anchor {visibility: hidden; text-decoration: none; line-height: 0em}
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+span:hover a.copiable-anchor {visibility: visible}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en">
+<div class="chapter" id="Machine-Desc">
+<div class="header">
+<p>
+Next: <a href="Target-Macros.html" accesskey="n" rel="next">Target Description Macros and Functions</a>, Previous: <a href="Loop-Analysis-and-Representation.html" accesskey="p" rel="prev">Analysis and Representation of Loops</a>, Up: <a href="index.html" accesskey="u" rel="up">Introduction</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Option-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<span id="Machine-Descriptions"></span><h2 class="chapter">17 Machine Descriptions</h2>
+<span id="index-machine-descriptions"></span>
+
+<p>A machine description has two parts: a file of instruction patterns
+(<samp>.md</samp> file) and a C header file of macro definitions.
+</p>
+<p>The <samp>.md</samp> file for a target machine contains a pattern for each
+instruction that the target machine supports (or at least each instruction
+that is worth telling the compiler about).  It may also contain comments.
+A semicolon causes the rest of the line to be a comment, unless the semicolon
+is inside a quoted string.
+</p>
+<p>See the next chapter for information on the C header file.
+</p>
+
+<ul class="section-toc">
+<li><a href="Overview.html" accesskey="1">Overview of How the Machine Description is Used</a></li>
+<li><a href="Patterns.html" accesskey="2">Everything about Instruction Patterns</a></li>
+<li><a href="Example.html" accesskey="3">Example of <code>define_insn</code></a></li>
+<li><a href="RTL-Template.html" accesskey="4">RTL Template</a></li>
+<li><a href="Output-Template.html" accesskey="5">Output Templates and Operand Substitution</a></li>
+<li><a href="Output-Statement.html" accesskey="6">C Statements for Assembler Output</a></li>
+<li><a href="Compact-Syntax.html" accesskey="7">Compact Syntax</a></li>
+<li><a href="Predicates.html" accesskey="8">Predicates</a></li>
+<li><a href="Constraints.html" accesskey="9">Operand Constraints</a></li>
+<li><a href="Standard-Names.html">Standard Pattern Names For Generation</a></li>
+<li><a href="Pattern-Ordering.html">When the Order of Patterns Matters</a></li>
+<li><a href="Dependent-Patterns.html">Interdependence of Patterns</a></li>
+<li><a href="Jump-Patterns.html">Defining Jump Instruction Patterns</a></li>
+<li><a href="Looping-Patterns.html">Defining Looping Instruction Patterns</a></li>
+<li><a href="Insn-Canonicalizations.html">Canonicalization of Instructions</a></li>
+<li><a href="Expander-Definitions.html">Defining RTL Sequences for Code Generation</a></li>
+<li><a href="Insn-Splitting.html">Defining How to Split Instructions</a></li>
+<li><a href="Including-Patterns.html">Including Patterns in Machine Descriptions.</a></li>
+<li><a href="Peephole-Definitions.html">Machine-Specific Peephole Optimizers</a></li>
+<li><a href="Insn-Attributes.html">Instruction Attributes</a></li>
+<li><a href="Conditional-Execution.html">Conditional Execution</a></li>
+<li><a href="Define-Subst.html">RTL Templates Transformations</a></li>
+<li><a href="Constant-Definitions.html">Constant Definitions</a></li>
+<li><a href="Iterators.html">Iterators</a></li>
+</ul>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+cbuild-set:
+  generated-by: vscode-cmsis-csolution version 1.60.0
+  environment: {}
+  contexts:
+    - context: CubeMX.Debug+STM32F4

@@ -1,0 +1,404 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:228 (message)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      The target system is: Generic -  - ARM
+      The host system is: Windows - 10.0.26200 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/arm-none-eabi-gcc.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-exit.o): in function `exit':
+      exit.c:(.text.exit+0x28): undefined reference to `_exit'
+      E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-closer.o): in function `_close_r':
+      closer.c:(.text._close_r+0x18): undefined reference to `_close'
+      E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-lseekr.o): in function `_lseek_r':
+      lseekr.c:(.text._lseek_r+0x24): undefined reference to `_lseek'
+      E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-readr.o): in function `_read_r':
+      readr.c:(.text._read_r+0x24): undefined reference to `_read'
+      E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-writer.o): in function `_write_r':
+      writer.c:(.text._write_r+0x24): undefined reference to `_write'
+      E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-sbrkr.o): in function `_sbrk_r':
+      sbrkr.c:(.text._sbrk_r+0x18): undefined reference to `_sbrk'
+      collect2.exe: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/arm-none-eabi-gcc.exe 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Build/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/arm-none-eabi-g++.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-exit.o): in function `exit':
+      exit.c:(.text.exit+0x28): undefined reference to `_exit'
+      E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-closer.o): in function `_close_r':
+      closer.c:(.text._close_r+0x18): undefined reference to `_close'
+      E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-lseekr.o): in function `_lseek_r':
+      lseekr.c:(.text._lseek_r+0x24): undefined reference to `_lseek'
+      E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-readr.o): in function `_read_r':
+      readr.c:(.text._read_r+0x24): undefined reference to `_read'
+      E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-writer.o): in function `_write_r':
+      writer.c:(.text._write_r+0x24): undefined reference to `_write'
+      E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-sbrkr.o): in function `_sbrk_r':
+      sbrkr.c:(.text._sbrk_r+0x18): undefined reference to `_sbrk'
+      collect2.exe: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/arm-none-eabi-g++.exe 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+      
+      The CXX compiler identification is GNU, found in:
+        E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Build/CMakeFiles/3.28.1/CompilerIdCXX/CMakeCXXCompilerId.o
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Build/CMakeFiles/CMakeScratch/TryCompile-aofsed"
+      binary: "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Build/CMakeFiles/CMakeScratch/TryCompile-aofsed"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Build/CMakeFiles/CMakeScratch/TryCompile-aofsed'
+        
+        Run Build Command(s): C:/ST/STM32CubeCLT_1.19.0/Ninja/bin/ninja.exe -v cmTC_27e68
+        [1/2] E:\\CODE\\STM32_IDE\\STM32_VSCODE\\CMake_study\\Gcc_Compiler\\bin\\arm-none-eabi-gcc.exe   -v -o CMakeFiles/cmTC_27e68.dir/CMakeCCompilerABI.c.obj -c C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=E:\\CODE\\STM32_IDE\\STM32_VSCODE\\CMake_study\\Gcc_Compiler\\bin\\arm-none-eabi-gcc.exe
+        Target: arm-none-eabi
+        Configured with: /data/jenkins/workspace/GNU-toolchain/arm-14/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-headers=yes --with-gnu-ld --with-native-system-header-dir=/include --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install/arm-none-eabi --with-bugurl=https://bugs.linaro.org/ --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --enable-mingw-wildcard --host=i686-w64-mingw32 --with-pkgversion='Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)'
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_27e68.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_27e68.dir/'
+         E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1.exe -quiet -v -iprefix E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../arm-none-eabi -D__USES_INITFINI__ C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_27e68.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\sucut\\AppData\\Local\\Temp\\cchXnZKd.s
+        GNU C17 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)
+        	compiled by GNU C version 10-win32 20220113, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include"
+        ignoring nonexistent directory "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../arm-none-eabi/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install/lib/gcc/arm-none-eabi/14.3.1/../../../../include"
+        ignoring duplicate directory "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed"
+        ignoring duplicate directory "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include"
+        ignoring duplicate directory "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../arm-none-eabi/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/include
+         E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed
+         E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include
+        End of search list.
+        Compiler executable checksum: b7d3e61a3c100ce920bcfa732511112e
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_27e68.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_27e68.dir/'
+         E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_27e68.dir/CMakeCCompilerABI.c.obj C:\\Users\\sucut\\AppData\\Local\\Temp\\cchXnZKd.s
+        GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616
+        COMPILER_PATH=E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../libexec/gcc/arm-none-eabi/14.3.1/;E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../libexec/gcc/;E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
+        LIBRARY_PATH=E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/;E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/;E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/;E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_27e68.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_27e68.dir/CMakeCCompilerABI.c.'\x0d
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\ST\\STM32CubeCLT_1.19.0\\CMake\\bin\\cmake.exe -E rm -f libcmTC_27e68.a && E:\\CODE\\STM32_IDE\\STM32_VSCODE\\CMake_study\\Gcc_Compiler\\bin\\arm-none-eabi-ar.exe qc libcmTC_27e68.a  CMakeFiles/cmTC_27e68.dir/CMakeCCompilerABI.c.obj && E:\\CODE\\STM32_IDE\\STM32_VSCODE\\CMake_study\\Gcc_Compiler\\bin\\arm-none-eabi-ranlib.exe libcmTC_27e68.a && cd ."
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/include]
+          add: [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+          add: [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
+        end of search list found
+        collapse include dir [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/include] ==> [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/lib/gcc/arm-none-eabi/14.3.1/include]
+        collapse include dir [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed] ==> [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+        collapse include dir [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include] ==> [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/arm-none-eabi/include]
+        implicit include dirs: [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/lib/gcc/arm-none-eabi/14.3.1/include;E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/lib/gcc/arm-none-eabi/14.3.1/include-fixed;E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/arm-none-eabi/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(arm-none-eabi-ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: 'E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Build/CMakeFiles/CMakeScratch/TryCompile-aofsed']
+        ignore line: []
+        ignore line: [Run Build Command(s): C:/ST/STM32CubeCLT_1.19.0/Ninja/bin/ninja.exe -v cmTC_27e68]
+        ignore line: [[1/2] E:\\CODE\\STM32_IDE\\STM32_VSCODE\\CMake_study\\Gcc_Compiler\\bin\\arm-none-eabi-gcc.exe   -v -o CMakeFiles/cmTC_27e68.dir/CMakeCCompilerABI.c.obj -c C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=E:\\CODE\\STM32_IDE\\STM32_VSCODE\\CMake_study\\Gcc_Compiler\\bin\\arm-none-eabi-gcc.exe]
+        ignore line: [Target: arm-none-eabi]
+        ignore line: [Configured with: /data/jenkins/workspace/GNU-toolchain/arm-14/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-headers=yes --with-gnu-ld --with-native-system-header-dir=/include --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install/arm-none-eabi --with-bugurl=https://bugs.linaro.org/ --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --enable-mingw-wildcard --host=i686-w64-mingw32 --with-pkgversion='Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)']
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_27e68.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_27e68.dir/']
+        ignore line: [ E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1.exe -quiet -v -iprefix E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../arm-none-eabi -D__USES_INITFINI__ C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_27e68.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\sucut\\AppData\\Local\\Temp\\cchXnZKd.s]
+        ignore line: [GNU C17 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version 10-win32 20220113  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include"]
+        ignore line: [ignoring nonexistent directory "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../arm-none-eabi/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install/lib/gcc/arm-none-eabi/14.3.1/../../../../include"]
+        ignore line: [ignoring duplicate directory "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed"]
+        ignore line: [ignoring duplicate directory "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include"]
+        ignore line: [ignoring duplicate directory "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../arm-none-eabi/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/include]
+        ignore line: [ E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+        ignore line: [ E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: b7d3e61a3c100ce920bcfa732511112e]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_27e68.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_27e68.dir/']
+        ignore line: [ E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_27e68.dir/CMakeCCompilerABI.c.obj C:\\Users\\sucut\\AppData\\Local\\Temp\\cchXnZKd.s]
+        ignore line: [GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616]
+        ignore line: [COMPILER_PATH=E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../libexec/gcc/arm-none-eabi/14.3.1/]
+        ignore line: [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../libexec/gcc/]
+        ignore line: [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/]
+        ignore line: [LIBRARY_PATH=E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/]
+        ignore line: [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/]
+        ignore line: [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/]
+        ignore line: [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../arm-none-eabi/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_27e68.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_27e68.dir/CMakeCCompilerABI.c.'\x0d]
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\ST\\STM32CubeCLT_1.19.0\\CMake\\bin\\cmake.exe -E rm -f libcmTC_27e68.a && E:\\CODE\\STM32_IDE\\STM32_VSCODE\\CMake_study\\Gcc_Compiler\\bin\\arm-none-eabi-ar.exe qc libcmTC_27e68.a  CMakeFiles/cmTC_27e68.dir/CMakeCCompilerABI.c.obj && E:\\CODE\\STM32_IDE\\STM32_VSCODE\\CMake_study\\Gcc_Compiler\\bin\\arm-none-eabi-ranlib.exe libcmTC_27e68.a && cd ."]
+        ignore line: []
+        ignore line: []
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Build/CMakeFiles/CMakeScratch/TryCompile-sc90ve"
+      binary: "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Build/CMakeFiles/CMakeScratch/TryCompile-sc90ve"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Build/CMakeFiles/CMakeScratch/TryCompile-sc90ve'
+        
+        Run Build Command(s): C:/ST/STM32CubeCLT_1.19.0/Ninja/bin/ninja.exe -v cmTC_47ed8
+        [1/2] E:\\CODE\\STM32_IDE\\STM32_VSCODE\\CMake_study\\Gcc_Compiler\\bin\\arm-none-eabi-g++.exe   -v -o CMakeFiles/cmTC_47ed8.dir/CMakeCXXCompilerABI.cpp.obj -c C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=E:\\CODE\\STM32_IDE\\STM32_VSCODE\\CMake_study\\Gcc_Compiler\\bin\\arm-none-eabi-g++.exe
+        Target: arm-none-eabi
+        Configured with: /data/jenkins/workspace/GNU-toolchain/arm-14/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-headers=yes --with-gnu-ld --with-native-system-header-dir=/include --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install/arm-none-eabi --with-bugurl=https://bugs.linaro.org/ --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --enable-mingw-wildcard --host=i686-w64-mingw32 --with-pkgversion='Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)'
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_47ed8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_47ed8.dir/'
+         E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1plus.exe -quiet -v -iprefix E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../arm-none-eabi -D__USES_INITFINI__ C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_47ed8.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\sucut\\AppData\\Local\\Temp\\ccwCOyND.s
+        GNU C++17 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)
+        	compiled by GNU C version 10-win32 20220113, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1"
+        ignoring duplicate directory "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi"
+        ignoring duplicate directory "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward"
+        ignoring duplicate directory "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include"
+        ignoring nonexistent directory "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../arm-none-eabi/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install/lib/gcc/arm-none-eabi/14.3.1/../../../../include"
+        ignoring duplicate directory "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed"
+        ignoring duplicate directory "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include"
+        ignoring duplicate directory "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../arm-none-eabi/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1
+         E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi
+         E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward
+         E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/include
+         E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed
+         E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include
+        End of search list.
+        Compiler executable checksum: dada17c8e112483894e5d212ab573e65
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_47ed8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_47ed8.dir/'
+         E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_47ed8.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\sucut\\AppData\\Local\\Temp\\ccwCOyND.s
+        GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616
+        COMPILER_PATH=E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../libexec/gcc/arm-none-eabi/14.3.1/;E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../libexec/gcc/;E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
+        LIBRARY_PATH=E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/;E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/;E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/;E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_47ed8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_47ed8.dir/CMakeCXXCompilerABI.cpp.'\x0d
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\ST\\STM32CubeCLT_1.19.0\\CMake\\bin\\cmake.exe -E rm -f libcmTC_47ed8.a && E:\\CODE\\STM32_IDE\\STM32_VSCODE\\CMake_study\\Gcc_Compiler\\bin\\arm-none-eabi-ar.exe qc libcmTC_47ed8.a  CMakeFiles/cmTC_47ed8.dir/CMakeCXXCompilerABI.cpp.obj && E:\\CODE\\STM32_IDE\\STM32_VSCODE\\CMake_study\\Gcc_Compiler\\bin\\arm-none-eabi-ranlib.exe libcmTC_47ed8.a && cd ."
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1]
+          add: [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi]
+          add: [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward]
+          add: [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/include]
+          add: [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+          add: [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
+        end of search list found
+        collapse include dir [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1] ==> [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/arm-none-eabi/include/c++/14.3.1]
+        collapse include dir [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi] ==> [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/arm-none-eabi/include/c++/14.3.1/arm-none-eabi]
+        collapse include dir [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward] ==> [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/arm-none-eabi/include/c++/14.3.1/backward]
+        collapse include dir [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/include] ==> [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/lib/gcc/arm-none-eabi/14.3.1/include]
+        collapse include dir [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed] ==> [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+        collapse include dir [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include] ==> [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/arm-none-eabi/include]
+        implicit include dirs: [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/arm-none-eabi/include/c++/14.3.1;E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/arm-none-eabi/include/c++/14.3.1/arm-none-eabi;E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/arm-none-eabi/include/c++/14.3.1/backward;E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/lib/gcc/arm-none-eabi/14.3.1/include;E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/lib/gcc/arm-none-eabi/14.3.1/include-fixed;E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/arm-none-eabi/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(arm-none-eabi-ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: 'E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Build/CMakeFiles/CMakeScratch/TryCompile-sc90ve']
+        ignore line: []
+        ignore line: [Run Build Command(s): C:/ST/STM32CubeCLT_1.19.0/Ninja/bin/ninja.exe -v cmTC_47ed8]
+        ignore line: [[1/2] E:\\CODE\\STM32_IDE\\STM32_VSCODE\\CMake_study\\Gcc_Compiler\\bin\\arm-none-eabi-g++.exe   -v -o CMakeFiles/cmTC_47ed8.dir/CMakeCXXCompilerABI.cpp.obj -c C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=E:\\CODE\\STM32_IDE\\STM32_VSCODE\\CMake_study\\Gcc_Compiler\\bin\\arm-none-eabi-g++.exe]
+        ignore line: [Target: arm-none-eabi]
+        ignore line: [Configured with: /data/jenkins/workspace/GNU-toolchain/arm-14/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-headers=yes --with-gnu-ld --with-native-system-header-dir=/include --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install/arm-none-eabi --with-bugurl=https://bugs.linaro.org/ --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/host-tools --enable-mingw-wildcard --host=i686-w64-mingw32 --with-pkgversion='Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)']
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_47ed8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_47ed8.dir/']
+        ignore line: [ E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1plus.exe -quiet -v -iprefix E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../arm-none-eabi -D__USES_INITFINI__ C:/ST/STM32CubeCLT_1.19.0/CMake/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_47ed8.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\sucut\\AppData\\Local\\Temp\\ccwCOyND.s]
+        ignore line: [GNU C++17 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version 10-win32 20220113  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1"]
+        ignore line: [ignoring duplicate directory "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi"]
+        ignore line: [ignoring duplicate directory "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward"]
+        ignore line: [ignoring duplicate directory "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include"]
+        ignore line: [ignoring nonexistent directory "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../arm-none-eabi/data/jenkins/workspace/GNU-toolchain/arm-14/build-mingw-arm-none-eabi/install/lib/gcc/arm-none-eabi/14.3.1/../../../../include"]
+        ignore line: [ignoring duplicate directory "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed"]
+        ignore line: [ignoring duplicate directory "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include"]
+        ignore line: [ignoring duplicate directory "E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../arm-none-eabi/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1]
+        ignore line: [ E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi]
+        ignore line: [ E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward]
+        ignore line: [ E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/include]
+        ignore line: [ E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+        ignore line: [ E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: dada17c8e112483894e5d212ab573e65]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_47ed8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_47ed8.dir/']
+        ignore line: [ E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_47ed8.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\sucut\\AppData\\Local\\Temp\\ccwCOyND.s]
+        ignore line: [GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616]
+        ignore line: [COMPILER_PATH=E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../libexec/gcc/arm-none-eabi/14.3.1/]
+        ignore line: [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../libexec/gcc/]
+        ignore line: [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/]
+        ignore line: [LIBRARY_PATH=E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/]
+        ignore line: [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/]
+        ignore line: [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/]
+        ignore line: [E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Gcc_Compiler/bin/../arm-none-eabi/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_47ed8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_47ed8.dir/CMakeCXXCompilerABI.cpp.'\x0d]
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\ST\\STM32CubeCLT_1.19.0\\CMake\\bin\\cmake.exe -E rm -f libcmTC_47ed8.a && E:\\CODE\\STM32_IDE\\STM32_VSCODE\\CMake_study\\Gcc_Compiler\\bin\\arm-none-eabi-ar.exe qc libcmTC_47ed8.a  CMakeFiles/cmTC_47ed8.dir/CMakeCXXCompilerABI.cpp.obj && E:\\CODE\\STM32_IDE\\STM32_VSCODE\\CMake_study\\Gcc_Compiler\\bin\\arm-none-eabi-ranlib.exe libcmTC_47ed8.a && cd ."]
+        ignore line: []
+        ignore line: []
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+...

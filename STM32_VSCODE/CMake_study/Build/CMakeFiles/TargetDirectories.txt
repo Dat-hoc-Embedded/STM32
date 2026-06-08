@@ -1,0 +1,3 @@
+E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Build/CMakeFiles/main.dir
+E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Build/CMakeFiles/edit_cache.dir
+E:/CODE/STM32_IDE/STM32_VSCODE/CMake_study/Build/CMakeFiles/rebuild_cache.dir

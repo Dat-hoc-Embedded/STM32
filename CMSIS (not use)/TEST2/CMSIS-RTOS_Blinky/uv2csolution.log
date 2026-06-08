@@ -1,0 +1,15 @@
+Error: 3 error(s), 0 warning(s):
+Errors:
+	The target "STM32F107 RAM" is configured to use Arm Compiler 5.
+	CMSIS csolution projects support Arm Compiler 6 only.
+	For details on how to manually migrate to AC6, see
+	https://developer.arm.com/documentation/100068/0621/Migrating-from-Arm-Compiler-5-to-Arm-Compiler-for-Embedded-6
+	The target "STM32F107 Flash" is configured to use Arm Compiler 5.
+	CMSIS csolution projects support Arm Compiler 6 only.
+	For details on how to manually migrate to AC6, see
+	https://developer.arm.com/documentation/100068/0621/Migrating-from-Arm-Compiler-5-to-Arm-Compiler-for-Embedded-6
+	The target "STM32F107 Flash + ULP" is configured to use Arm Compiler 5.
+	CMSIS csolution projects support Arm Compiler 6 only.
+	For details on how to manually migrate to AC6, see
+	https://developer.arm.com/documentation/100068/0621/Migrating-from-Arm-Compiler-5-to-Arm-Compiler-for-Embedded-6
+0 out of 3 target(s) converted
