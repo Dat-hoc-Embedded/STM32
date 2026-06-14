@@ -1,7 +1,18 @@
 {
+    // Cài đặt VS Code dành riêng cho workspace này
     "files.associations": {
         "stm32f4xx.h": "c",
         "motor.h": "c",
-        "stdint.h": "c"
-    }
+        "stdint.h": "c",
+        "*.conf": "bitbake",
+        "*.inc": "bitbake"
+    },
+    "python.autoComplete.extraPaths": [
+        "${workspaceFolder}/sources/poky/bitbake/lib",
+        "${workspaceFolder}\\sources\\poky\\meta\\lib"
+    ],
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/sources/poky/bitbake/lib",
+        "${workspaceFolder}\\sources\\poky\\meta\\lib"
+    ]
 }

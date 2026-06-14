@@ -1,4 +1,8 @@
 {
+    /**
+        When you open this workspace in Visual Studio Code, you will be prompted to install the extensions listed here. 
+        These extensions are not required to work with the code in this repository, but they are recommended for a better experience.
+    **/
     "recommendations": [
         "ms-vscode.cpptools",                   // (dependencies to ms-vscode.cpptools-extension-pack)
         "ms-vscode.cpptools-themes",            // (dependencies to ms-vscode.cpptools-extension-pack)
