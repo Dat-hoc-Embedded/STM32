@@ -1,8 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"E:/CODE/STM32_IDE/STM32_MX/hahahaah/build/Debug/cmake_install.cmake",
-		"E:/CODE/STM32_IDE/STM32_MX/hahahaah/build/Debug/cmake/stm32cubemx/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
