@@ -35,37 +35,37 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := STM32F103C8
+BUILD_ARTIFACT_NAME := C8
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX := 
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME).$(BUILD_ARTIFACT_EXTENSION)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-STM32F103C8.elf \
+C8.elf \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-STM32F103C8.list \
+C8.list \
 
 OBJCOPY_HEX += \
-STM32F103C8.hex \
+C8.hex \
 
 OBJCOPY_BIN += \
-STM32F103C8.bin \
+C8.bin \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: STM32F103C8.elf secondary-outputs
+main-build: C8.elf secondary-outputs
 
 # Tool invocations
-STM32F103C8.elf: $(OBJS) $(USER_OBJS) D:\STUDY\Embedded\STM32_CubeIDE\C8\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "STM32F103C8.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\STUDY\Embedded\STM32_CubeIDE\C8\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F103C8.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C8.elf: $(OBJS) $(USER_OBJS) E:\CODE\STM32_IDE\IMIC\C8\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "C8.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"E:\CODE\STM32_IDE\IMIC\C8\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="C8.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -74,18 +74,18 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-STM32F103C8.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "STM32F103C8.list"
+C8.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "C8.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-STM32F103C8.hex: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objcopy  -O ihex $(EXECUTABLES) "STM32F103C8.hex"
+C8.hex: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O ihex $(EXECUTABLES) "C8.hex"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-STM32F103C8.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "STM32F103C8.bin"
+C8.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "C8.bin"
 	@echo 'Finished building: $@'
 	@echo ' '
 

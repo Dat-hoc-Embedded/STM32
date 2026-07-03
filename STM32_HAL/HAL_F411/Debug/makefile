@@ -60,8 +60,8 @@ all: main-build
 main-build: HAL_F411.elf secondary-outputs
 
 # Tool invocations
-HAL_F411.elf HAL_F411.map: $(OBJS) $(USER_OBJS) D:\CODE\STM32_IDE\STM32_HAL\HAL_F411\STM32F411VETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "HAL_F411.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\CODE\STM32_IDE\STM32_HAL\HAL_F411\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="HAL_F411.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+HAL_F411.elf HAL_F411.map: $(OBJS) $(USER_OBJS) E:\CODE\STM32_IDE\STM32_HAL\HAL_F411\STM32F411VETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "HAL_F411.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"E:\CODE\STM32_IDE\STM32_HAL\HAL_F411\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="HAL_F411.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

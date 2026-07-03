@@ -1,3 +1,17 @@
+codetogether.last.session.ended=1783068860130
 codetogether.main.view.displayed=true
+codetogether.show.editor.status.label=true
+codetogether.terminal.revealOnGuestActivity=true
+codetogether.trust.all.ssl=false
+default.auth=prompt
+default.cursor=JOIN_CURSOR_ASK
+default.drive=all
+default.edit=all
+default.run=all
+default.team.only=false
 eclipse.preferences.version=1
+first.feedback=1783068858130
+last.feedback=1783068858130
+offer.on.selection=true
+reported.codetogether=true
 uuid=dgcWa6x0ZgVGN1tyxSB57o

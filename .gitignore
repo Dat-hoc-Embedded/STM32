@@ -1,0 +1,67 @@
+# ##########################################
+#  Production/Build (Thư mục đóng gói)
+# ##########################################
+build/
+dist/
+.next/
+out/
+
+# ##########################################
+# Hệ điều hành & IDE
+# ##########################################
+.DS_Store
+.vscode/
+.idea/
+
+# Ignore cấu hình riêng của STM32CubeIDE / Eclipse
+.metadata/
+.Subversive/
+RemoteSystemsTempFiles/
+
+# Ignore thư mục build sản phẩm đầu ra (nếu có)
+Debug/
+Release/
+
+# ==========================================
+# 1. STM32CubeIDE
+# ==========================================
+.metadata/
+.settings/
+Debug/
+Release/
+*.launch
+
+# ==========================================
+# 2. Keil C (MDK-ARM)
+# ==========================================
+Listings/
+Objects/
+*.bak
+*.dep
+*.d
+*.crf
+*.o
+*.lnp
+*.axf
+*.htm
+*.build_log.htm
+*.sct
+*.map
+*._ia
+*.lst
+*.uvguix.*
+
+# ==========================================
+# 3. PlatformIO
+# ==========================================
+.pio/
+.pioenvs/
+.piolibdeps/
+.vscode/.browse.VC.db
+.vscode/ipch/
+
+# ==========================================
+# 4. Hệ điều hành sản sinh
+# ==========================================
+.DS_Store
+Thumbs.db

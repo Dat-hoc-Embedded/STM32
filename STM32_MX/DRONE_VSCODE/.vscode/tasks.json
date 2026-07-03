@@ -13,14 +13,14 @@
             "type": "shell",
             "label": "CubeProg: Flash project (SWD)",
             "command": "STM32_Programmer_CLI",
-            "args": [
+            "args": [ 
                 "--connect",
                 "port=swd",
                 "--download",
                 "${command:cmake.launchTargetPath}",
                 "-hardRst",
                 "-rst",
-                "--start"
+                "--start" 
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
@@ -33,7 +33,8 @@
             "dependsOn": [
                 "CMake: clean rebuild",
                 "CubeProg: Flash project (SWD)"
-            ]
+            ],
+            "problemMatcher": []
         },
         {
             "type": "cmake",

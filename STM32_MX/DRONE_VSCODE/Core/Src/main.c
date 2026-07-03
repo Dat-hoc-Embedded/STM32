@@ -364,8 +364,8 @@ void LED_Off(void)
 }
 int main(){
 	Clock_Init();
-	UART1_INIT();
-	LED_Init();  // Initialize LED
+	// UART1_INIT();
+	// LED_Init();  // Initialize LED
 
 	/* ====== DEBUG: Print Clock Configuration ====== */
 	// Clock_Debug_Print();              // In tất cả clock frequencies hiện tại
@@ -382,14 +382,8 @@ int main(){
 	// rx_init();
 
 	while (1){
-		/* ====== LED BLINK - Nhấp nháy LED ====== */
-		LED_Toggle();           // Toggle LED (bật/tắt)
-		HAL_Delay(500);         // Delay 500ms
 
-		/* ====== Motor Control ====== */
-		motor_pwm_set(2, 1500);
-		
-		systick++;
-	};
+		motor_pwm_set(1, 1200);
+			};
 
 }

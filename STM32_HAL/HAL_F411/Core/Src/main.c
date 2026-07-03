@@ -47,6 +47,7 @@
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -84,17 +85,22 @@ int main(void)
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
+  MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
   while (1)
   {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+
+
+
   }
   /* USER CODE END 3 */
 }
@@ -116,9 +122,8 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
-  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
-  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
@@ -129,7 +134,7 @@ void SystemClock_Config(void)
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSE;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
@@ -138,6 +143,25 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+}
+
+/**
+  * @brief GPIO Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_GPIO_Init(void)
+{
+  /* USER CODE BEGIN MX_GPIO_Init_1 */
+
+  /* USER CODE END MX_GPIO_Init_1 */
+
+  /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOH_CLK_ENABLE();
+
+  /* USER CODE BEGIN MX_GPIO_Init_2 */
+
+  /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
