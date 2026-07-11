@@ -294,6 +294,24 @@ Ctrl+Shift+P → CMake: Build
 Ctrl+Shift+P → Tasks: Run Task → CMake: clean rebuild
 ```
 
+### Build with terminal
+```bash
+# 1. Configure build folder using preset
+cmake --preset Debug
+
+# 2. Build the project
+cmake --build --preset Debug
+
+# 3. Clean build artifacts
+cmake --build --preset Debug --target clean
+
+# 4. Use Release preset if needed
+cmake --preset Release
+cmake --build --preset Release
+```
+
+> Build output is generated in `build/Debug/` or `build/Release/` depending on the preset.
+
 ### Flash to STM32
 ```bash
 # Cách 1: Sử dụng task
