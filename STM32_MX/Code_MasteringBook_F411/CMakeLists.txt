@@ -19,7 +19,7 @@ if(NOT CMAKE_BUILD_TYPE)
 endif()
 
 # Set the project name
-set(CMAKE_PROJECT_NAME hahahaah)
+set(CMAKE_PROJECT_NAME "Code_MasteringBook_F411")
 
 # Include toolchain file
 include("cmake/gcc-arm-none-eabi.cmake")
